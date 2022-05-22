@@ -1,20 +1,21 @@
 import React from 'react'
 
 export default function Footer() {
-    const styles = {
-        mwidth: { width: '400px' }
-    }
+    const date = new Date()
+    date.getFullYear()
+
   return (
-    <div className="container-xxl bg-white p-0">
-      {/* Footer Start */}
-      <div className="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+
+    <>
+        {/* Footer Start */}
+        <div className="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
             <div className="container py-5">
                 <div className="row g-5">
                     <div className="col-lg-3 col-md-6">
                         <h5 className="text-white mb-4">Get In Touch</h5>
-                        <p className="mb-2"><i className="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                        <p className="mb-2"><i className="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                        <p className="mb-2"><i className="fa fa-envelope me-3"></i>info@example.com</p>
+                        <p className="mb-2"><i className="fa fa-map-marker-alt me-3"></i>348 Bonaberi, Douala, Cameroon</p>
+                        <p className="mb-2"><i className="fa fa-phone-alt me-3"></i>+237680749528</p>
+                        <p className="mb-2"><i className="fa fa-envelope me-3"></i>dyingchuo@gmail.com</p>
                         <div className="d-flex pt-2">
                             <a className="btn btn-outline-light btn-social" href="#home"><i className="fab fa-twitter"></i></a>
                             <a className="btn btn-outline-light btn-social" href="#home"><i className="fab fa-facebook-f"></i></a>
@@ -25,10 +26,10 @@ export default function Footer() {
                     <div className="col-lg-3 col-md-6">
                         <h5 className="text-white mb-4">Quick Links</h5>
                         <a className="btn btn-link text-white-50" href="#home">About Us</a>
-                        <a className="btn btn-link text-white-50" href="#home">Contact Us</a>
-                        <a className="btn btn-link text-white-50" href="#home">Our Services</a>
-                        <a className="btn btn-link text-white-50" href="#home">Privacy Policy</a>
-                        <a className="btn btn-link text-white-50" href="#home">Terms & Condition</a>
+                        <a className="btn btn-link text-white-50" href="#home">Booking</a>
+                        <a className="btn btn-link text-white-50" href="#home">Stores</a>
+                        <a className="btn btn-link text-white-50" href="#home">Our Team</a>
+                        <a className="btn btn-link text-white-50" href="#home">Testimonials</a>
                     </div>
                     <div className="col-lg-3 col-md-6">
                         <h5 className="text-white mb-4">Photo Gallery</h5>
@@ -56,7 +57,7 @@ export default function Footer() {
                     <div className="col-lg-3 col-md-6">
                         <h5 className="text-white mb-4">Newsletter</h5>
                         <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                        <div className="position-relative mx-auto" style={styles.mwidth}>
+                        <div className="position-relative mx-auto" style={{maxWidth: '400px'}}>
                             <input className="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email" />
                             <button type="button" className="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
                         </div>
@@ -67,17 +68,13 @@ export default function Footer() {
                 <div className="copyright">
                     <div className="row">
                         <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a className="border-bottom" href="#home">Your Site Name</a>, All Right Reserved. 
+                            <div>
+                                &copy; Copyright  <a className="text-primary" href="#home">FINDER</a> All Right Reserved.
+                            </div> 
 							
 							{/* This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. */}
-							Designed By <a className="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
-                        </div>
-                        <div className="col-md-6 text-center text-md-end">
-                            <div className="footer-menu">
-                                <a href="#home">Home</a>
-                                <a href="#home">Cookies</a>
-                                <a href="#home">Help</a>
-                                <a href="#home">FQAs</a>
+							<div>
+                                Designed By <a className="text-primary" href="https://htmlcodex.com">Dgitech</a>
                             </div>
                         </div>
                     </div>
@@ -86,10 +83,9 @@ export default function Footer() {
         </div>
         {/* Footer End */}
 
-
         {/* Back to Top */}
-        <a href="#home" className="btn btn-lg btn-primary btn-lg-square back-to-top"><i className="bi bi-arrow-up"></i></a>
+        <a href="#" className="btn btn-lg btn-primary btn-lg-square back-to-top"><i className="bi bi-arrow-up"></i></a>
 
-    </div>
+    </>
   )
 }

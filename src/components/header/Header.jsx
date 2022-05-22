@@ -2,30 +2,51 @@ import React from 'react'
 
 export default function Header() {
   return (
-    <div className="container-xxl bg-white p-0">
-      {/* Header Start */}
-      <div className="container-fluid header bg-white p-0">
-            <div className="row g-0 align-items-center flex-column-reverse flex-md-row">
-                <div className="col-md-6 p-5 mt-lg-5">
-                    <h1 className="display-5 animated fadeIn mb-4">Find A <span className="text-primary">Perfect Home</span> To Live With Your Family</h1>
-                    <p className="animated fadeIn mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet
-                        sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
-                    <a href="#home" className="btn btn-primary py-3 px-5 me-3 animated fadeIn">Get Started</a>
-                </div>
-                <div className="col-md-6 animated fadeIn">
-                    <div className="owl-carousel header-carousel">
-                        <div className="owl-carousel-item">
-                            <img className="img-fluid" src="img/carousel-1.jpg" alt="" />
+    <>  
+        {/* <!-- Search Start --> */}
+        <div className="container-fluid bg-primary mb-5 wow fadeIn" data-wow-delay="0.1s" style={{padding: '35px'}}>
+            <div className="container">
+                <div className="row g-2">
+                    <div className="col-md-10">
+                        <div className="row g-2">
+                            <div className="col-md-4">
+                                <input type="text" className="form-control border-0 py-3" placeholder="Search Keyword" />
+                            </div>
+                            <div className="col-md-4">
+                                <select defaultValue="" className="form-select border-0 py-3">
+                                    <option value="">Search by Category</option>
+                                    <option value="1">Super Market</option>
+                                    <option value="2">Barber Shop</option>
+                                    <option value="3">Grocery Store</option>
+                                    <option value="4">Fashion Store</option>
+                                    <option value="3">Patrol Station</option>
+
+                                </select>
+                            </div>
+                            <div className="col-md-4">
+                                <select defaultValue="" className="form-select border-0 py-3">
+                                    <option value="" >Search by Location</option>
+                                    <option value="1">Bamenda</option>
+                                    <option value="2">Yaounde</option>
+                                    <option value="3">Douala</option>
+                                    <option value="4">Garoua</option>
+                                    <option value="5">Betuoa</option>
+                                    <option value="6">Maroua</option>
+                                    <option value="7">South West</option>
+                                    <option value="8">Baffoussam</option>
+                                    <option value="3">Ebolowa</option>
+                                </select>
+                            </div>
                         </div>
-                        <div className="owl-carousel-item">
-                            <img className="img-fluid" src="img/carousel-2.jpg" alt="" />
-                        </div>
+                    </div>
+                    <div className="col-md-2">
+                        <button className="btn btn-dark border-0 w-100 py-3">Search<i className="bi bi-search-send"></i></button>
                     </div>
                 </div>
             </div>
         </div>
-        {/* Header End */}
+        {/* <!-- Search End --> */}
 
-    </div>
+    </>
   )
 }
