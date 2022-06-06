@@ -1,9 +1,8 @@
 import About from './pages/about/About'
 import Category from './pages/category/Category'
 import Contact from './pages/contact/Contact'
-import Property from './pages/property/Property'
+import Stores from './pages/store/Stores'
 import Team from './pages/team/Team'
-import Testimonials from './pages/testimonial/Testimonials'
 
 
 const routes = [
@@ -26,9 +25,9 @@ const routes = [
     },
 
     {
-        path: 'property',
-        name: 'Property',
-        component: Property,
+        path: 'stores',
+        name: 'Stores',
+        component: Stores,
     },
 
     {
@@ -37,11 +36,6 @@ const routes = [
         component: Team,
     },
 
-    {
-        path: 'testimonial',
-        name: 'Testimonial',
-        component: Testimonials
-    },
 ]
 
 export default routes; 

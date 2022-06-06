@@ -15,11 +15,13 @@ export default function Header() {
                             <div className="col-md-4">
                                 <select defaultValue="" className="form-select border-0 py-3">
                                     <option value="">Search by Category</option>
-                                    <option value="1">Super Market</option>
-                                    <option value="2">Barber Shop</option>
-                                    <option value="3">Grocery Store</option>
-                                    <option value="4">Fashion Store</option>
-                                    <option value="3">Patrol Station</option>
+                                    <option value="1">SUPER MARKET</option>
+                                    <option value="2">BARBAR SHOP</option>
+                                    <option value="3">GROCERY STORE</option>
+                                    <option value="4">FASHION STORE</option>
+                                    <option value="5">PATROL STATION</option>
+                                    <option value="6">OFFICE</option>
+                                    <option value="7">PHARMACY</option>
 
                                 </select>
                             </div>
@@ -40,7 +42,7 @@ export default function Header() {
                         </div>
                     </div>
                     <div className="col-md-2">
-                        <button className="btn btn-dark border-0 w-100 py-3">Search<i className="bi bi-search-send"></i></button>
+                        <a href="/booking" className="btn btn-dark border-0 w-100 py-3">Search<i className="bi bi-search-send"></i></a>
                     </div>
                 </div>
             </div>

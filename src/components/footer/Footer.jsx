@@ -25,14 +25,14 @@ export default function Footer() {
                     </div>
                     <div className="col-lg-3 col-md-6">
                         <h5 className="text-white mb-4">Quick Links</h5>
-                        <a className="btn btn-link text-white-50" href="#home">About Us</a>
-                        <a className="btn btn-link text-white-50" href="#home">Booking</a>
-                        <a className="btn btn-link text-white-50" href="#home">Stores</a>
-                        <a className="btn btn-link text-white-50" href="#home">Our Team</a>
-                        <a className="btn btn-link text-white-50" href="#home">Testimonials</a>
+                        <a className="btn btn-link text-white-50" href="/about">About Us</a>
+                        <a className="btn btn-link text-white-50" href="/booking">Booking</a>
+                        <a className="btn btn-link text-white-50" href="/stores">Stores</a>
+                        <a className="btn btn-link text-white-50" href="/team">Our Team</a>
+                        <a className="btn btn-link text-white-50" href="/category">Category</a>
                     </div>
                     <div className="col-lg-3 col-md-6">
-                        <h5 className="text-white mb-4">Photo Gallery</h5>
+                        <h5 className="text-white mb-4">Store Gallery</h5>
                         <div className="row g-2 pt-2">
                             <div className="col-4">
                                 <img className="img-fluid rounded bg-light p-1" src="img/property-1.jpg" alt="" />
@@ -56,10 +56,10 @@ export default function Footer() {
                     </div>
                     <div className="col-lg-3 col-md-6">
                         <h5 className="text-white mb-4">Newsletter</h5>
-                        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                        <p>Sign up to get the leatest trends and post from our platform.</p>
                         <div className="position-relative mx-auto" style={{maxWidth: '400px'}}>
-                            <input className="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email" />
-                            <button type="button" className="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                            <input className="text-white-50 form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email" />
+                            <a href="email" type="button" className="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</a>
                         </div>
                     </div>
                 </div>
@@ -67,14 +67,14 @@ export default function Footer() {
             <div className="container">
                 <div className="copyright">
                     <div className="row">
-                        <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            <div>
-                                &copy; Copyright  <a className="text-primary" href="#home">FINDER</a> All Right Reserved.
+                        <div className="text-md-center mb-0">
+                            <div className="text-center">
+                                &copy; Copyright  <a className="text-primary" href="/">FINDER</a> All Right Reserved.
                             </div> 
 							
 							{/* This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. */}
-							<div>
-                                Designed By <a className="text-primary" href="https://htmlcodex.com">Dgitech</a>
+							<div className="text-center">
+                                Designed By <a className="text-primary" href="/dgitech">Dgitech</a>
                             </div>
                         </div>
                     </div>
@@ -84,7 +84,7 @@ export default function Footer() {
         {/* Footer End */}
 
         {/* Back to Top */}
-        <a href="#" className="btn btn-lg btn-primary btn-lg-square back-to-top"><i className="bi bi-arrow-up"></i></a>
+        {/* <a href="#" className="btn btn-lg btn-primary btn-lg-square back-to-top"><i className="bi bi-arrow-up"></i></a> */}
 
     </>
   )
