@@ -1,20 +1,19 @@
 import React from 'react'
 import Nav from '../../components/nav/Nav'
-
 export default function Team() {
     return (
         <>
             <Nav />
             {/* <!-- Carousel Start --> */}
-            <div className="container-fluid p-0 mb-3">
+            <div className="container-fluid">
                 <div id="header-carousel" className="carousel slide" data-bs-ride="carousel">
                     <div className="carousel-inner">
                         <div className="carousel-item active" style={{maxHeight: '300px'}}>
                             <img className="w-100" src="img/carousel-1.jpg" alt="" />
                             <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                                <div className="p-3" style={{maxWidth: '700px'}}>
-                                    <h6 className="section-title text-white text-uppercase mb-3 animated slideInDown">Online Store Rental Platform</h6>
-                                    <h1 className="display-3 text-white mb-4 animated slideInDown">Meet with our Amazing Team</h1>
+                                <div className="" style={{maxWidth: '700px'}}>
+                                    <h6 className="section-title text-white text-uppercase mb-2 animated slideInDown">Online Store Rental Platform</h6>
+                                    <h1 className="text-white mb-4 animated slideInDown">Meet with our Amazing Team</h1>
                                     <a href="/about" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Rent Store</a>
                                     <a href="/about" className="btn btn-light py-md-3 px-md-5 animated slideInRight">Buy a Store</a>
                                 </div>
@@ -23,9 +22,9 @@ export default function Team() {
                         <div className="carousel-item" style={{maxHeight: '300px'}}>
                             <img className="w-100" src="img/carousel-2.jpg" alt="" />
                             <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                                <div className="p-3" style={{maxWidth: '700px'}}>
-                                    <h6 className="section-title text-white text-uppercase mb-3 animated slideInDown">Online Store Rental Platform</h6>
-                                    <h1 className="display-3 text-white mb-4 animated slideInDown">We are bended to give you just the best</h1>
+                                <div className="" style={{maxWidth: '700px'}}>
+                                    <h6 className="section-title text-white text-uppercase mb-2 animated slideInDown">Online Store Rental Platform</h6>
+                                    <h1 className="text-white mb-4 animated slideInDown">We are bended to give you just the best</h1>
                                     <a href="/about" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Rent Store</a>
                                     <a href="/about" className="btn btn-light py-md-3 px-md-5 animated slideInRight">Buy a Store</a>
                                 </div>
@@ -47,7 +46,6 @@ export default function Team() {
             {/* <!-- Carousel End --> */}
 
             {/* Team Start */}
-            <div className="container-xxl py-5">
                 <div className="container py-5">
                     <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
                         <h1 className="mb-3">Our Team</h1>
@@ -127,7 +125,7 @@ export default function Team() {
                         </div>
                     </div>
                 </div>
-            </div>
+            
             {/* Team End */}
 
         </>

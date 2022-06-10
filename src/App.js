@@ -5,15 +5,15 @@ import Category from './pages/category/Category'
 import Booking from './pages/booking/Booking'
 import Stores from './pages/store/Stores'
 import Team from './pages/team/Team'
-import SignIn from './components/signin/SignIn'
-import SignUp from './components/signup/SignUp';
+import SignIn from './components/auth/SignIn'
+import SignUp from './components/auth/SignUp';
 import Error from './pages/Error'
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
     
   return (
-    <div className="container-xxl bg-white p-0">
+    <div className="container-xxl bg-light p-0">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

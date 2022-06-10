@@ -1,21 +1,36 @@
-import React from 'react'
+import React, {  } from 'react'
+// import axios from 'axios';
 import Footer from '../../components/footer/Footer';
 import Nav from '../../components/nav/Nav';
 
 export default function Stores() {
+    // const [name, setName] = useState('')
+    // const [category, setCategory] = useState('')
+    // const [amount, setAmount] = useState('')
+    // const [description, setDescription] = useState('')
+    // const [purpose, setPurpose] = useState('')
+    // const [area, setArea] = useState('')
+    // const [location, setLocation] = useState('')
+    // const [image, setImage] = useState('')
+    
+    // useEffect(() => {
+    //     axios.get('http://127.0.0.1:8000/admin/store/').then((res) => {
+    //         console.log(res.data)
+    //     })
+    // }, []);
     return (
         <>
             <Nav />
             {/* <!-- Carousel Start --> */}
-            <div className="container-fluid p-0 mb-3">
+            <div className="container-fluid p-0">
                 <div id="header-carousel" className="carousel slide" data-bs-ride="carousel">
                     <div className="carousel-inner">
                         <div className="carousel-item active" style={{maxHeight: '300px'}}>
                             <img className="w-100" src="finder/carousel-1.jpeg" alt="" />
                             <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                                <div className="p-3" style={{maxWidth: '700px'}}>
-                                    <h6 className="section-title text-white text-uppercase mb-3 animated slideInDown">Online Store Rental Platform</h6>
-                                    <h1 className="display-3 text-white mb-4 animated slideInDown">View amongst our listed items</h1>
+                                <div className="" style={{maxWidth: '700px'}}>
+                                    <h6 className="section-title text-white text-uppercase mb-2 animated slideInDown">Online Store Rental Platform</h6>
+                                    <h1 className="text-white mb-4 animated slideInDown">View amongst our listed items</h1>
                                     <a href="/about" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Rent Store</a>
                                     <a href="/about" className="btn btn-light py-md-3 px-md-5 animated slideInRight">Buy a Store</a>
                                 </div>
@@ -24,9 +39,9 @@ export default function Stores() {
                         <div className="carousel-item" style={{maxHeight: '300px'}}>
                             <img className="w-100" src="finder/carousel-2.jpeg" alt="" />
                             <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                                <div className="p-3" style={{maxWidth: '700px'}}>
-                                    <h6 className="section-title text-white text-uppercase mb-3 animated slideInDown">Online Store Rental Platform</h6>
-                                    <h1 className="display-3 text-white mb-4 animated slideInDown">We are happy to see your here!</h1>
+                                <div className="" style={{maxWidth: '700px'}}>
+                                    <h6 className="section-title text-white text-uppercase mb-2 animated slideInDown">Online Store Rental Platform</h6>
+                                    <h1 className="text-white mb-4 animated slideInDown">We are happy to see your here!</h1>
                                     <a href="/about" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Rent Store</a>
                                     <a href="/about" className="btn btn-light py-md-3 px-md-5 animated slideInRight">Buy a Store</a>
                                 </div>
@@ -45,9 +60,9 @@ export default function Stores() {
                     </button>
                 </div>
             </div>
-            {/* <!-- Carousel End --> */}
 
-            {/* <!-- Property List Start --> */}
+
+            {/* Team Start */}
             <div className="container-xxl py-5">
                 <div className="container">
                     <div className="row g-0 gx-5 align-items-end">
@@ -74,6 +89,7 @@ export default function Stores() {
                     <div className="tab-content">
                         <div id="tab-1" className="tab-pane fade show p-0 active">
                             <div className="row g-4">
+                                
                                 <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                                     <div className="property-item rounded overflow-hidden">
                                         <div className="position-relative overflow-hidden">
@@ -89,10 +105,12 @@ export default function Stores() {
                                         <div className="d-flex border-top">
                                             <small className="flex-fill text-center border-end py-2"><i className="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
                                             <small className="flex-fill text-center border-end py-2"><i className="fa fa-bed text-primary me-2"></i>5 rooms</small>
-                                            <a href="/booking" className="btn btn-primary py-3 px-5">Rent</a>  
+                                            <a href="/booking" className="btn btn-primary py-3 px-5 ">Rent</a>  
                                         </div>
                                     </div>
                                 </div>
+
+
                                 <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                                     <div className="property-item rounded overflow-hidden">
                                         <div className="position-relative overflow-hidden">
@@ -112,6 +130,8 @@ export default function Stores() {
                                         </div>
                                     </div>
                                 </div>
+
+
                                 <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                                     <div className="property-item rounded overflow-hidden">
                                         <div className="position-relative overflow-hidden">
@@ -133,8 +153,6 @@ export default function Stores() {
                                 </div>
 
 
-
-                                
                                 <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                                     <div className="property-item rounded overflow-hidden">
                                         <div className="position-relative overflow-hidden">
@@ -154,6 +172,8 @@ export default function Stores() {
                                         </div>
                                     </div>
                                 </div>
+
+
                                 <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                                     <div className="property-item rounded overflow-hidden">
                                         <div className="position-relative overflow-hidden">
@@ -173,6 +193,8 @@ export default function Stores() {
                                         </div>
                                     </div>
                                 </div>
+
+
                                 <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                                     <div className="property-item rounded overflow-hidden">
                                         <div className="position-relative overflow-hidden">

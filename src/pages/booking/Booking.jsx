@@ -7,26 +7,26 @@ export default function Booking() {
         <>
             <Nav />
             {/* <!-- Carousel Start --> */}
-            <div className="container-fluid p-0 mb-3">
+            <div className="container-fluid p-0">
                 <div id="header-carousel" className="carousel slide" data-bs-ride="carousel">
                     <div className="carousel-inner">
                         <div className="carousel-item active" style={{maxHeight: '300px'}}>
-                            <img className="w-100" src="img/carousel-1.jpg" alt="" />
+                            <img className="w-100" src="finder/mfound-yaounde.webp" alt="" />
                             <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                                <div className="p-3" style={{maxWidth: '700px'}}>
-                                    <h6 className="section-title text-white text-uppercase mb-3 animated slideInDown">Online Store Rental Platform</h6>
-                                    <h1 className="display-3 text-white mb-4 animated slideInDown">Welcome to the About Us Page</h1>
+                                <div className="" style={{maxWidth: '700px'}}>
+                                    <h6 className="section-title text-white text-uppercase mb-2 animated slideInDown">Online Store Rental Platform</h6>
+                                    <h1 className="text-white mb-4 animated slideInDown">Find and book a store</h1>
                                     <a href="/about" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Rent Store</a>
                                     <a href="/about" className="btn btn-light py-md-3 px-md-5 animated slideInRight">Buy a Store</a>
                                 </div>
                             </div>
                         </div>
                         <div className="carousel-item" style={{maxHeight: '300px'}}>
-                            <img className="w-100" src="img/carousel-2.jpg" alt="" />
+                            <img className="w-100" src="finder/mfound-yaounde.webp" alt="" />
                             <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                                <div className="p-3" style={{maxWidth: '700px'}}>
-                                    <h6 className="section-title text-white text-uppercase mb-3 animated slideInDown">Online Store Rental Platform</h6>
-                                    <h1 className="display-3 text-white mb-4 animated slideInDown">Welcome to the About Us page</h1>
+                                <div className="" style={{maxWidth: '700px'}}>
+                                    <h6 className="section-title text-white text-uppercase mb-2 animated slideInDown">Online Store Rental Platform</h6>
+                                    <h1 className="text-white mb-4 animated slideInDown">Online store rental made easy</h1>
                                     <a href="/about" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Rent Store</a>
                                     <a href="/about" className="btn btn-light py-md-3 px-md-5 animated slideInRight">Buy a Store</a>
                                 </div>
@@ -48,13 +48,13 @@ export default function Booking() {
             {/* <!-- Carousel End --> */}
 
             {/* Booking start */}
-            <div className="container-fluid bg-secondary booking my-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div className="container-fluid bg-secondary booking wow fadeInUp" data-wow-delay="0.1s">
                 <div className="container">
                     <div className="row gx-5">
                         <div className="col-lg-6 py-5">
                             <div className="py-5">
-                                <h1 className="text-white mb-4">Certified and Award Winning Online Store rental Service Provider</h1>
-                                <p className="text-white mb-0">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit. Sea dolore sanctus sed et. Takimata takimata sanctus sed.</p>
+                                <h1 className="text-white text-center mb-4">Certified and Award Winning Online Store rental Service Provider</h1>
+                                <p className="text-white text-center mb-0">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit. Sea dolore sanctus sed et. Takimata takimata sanctus sed.</p>
                             </div>
                         </div>
                         <div className="col-lg-6">

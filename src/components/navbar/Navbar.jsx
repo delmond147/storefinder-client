@@ -6,7 +6,7 @@ export default function Navbar() {
         <>
             {/* Topbar Start */}
             <div className="container-fluid bg-light p-0">
-                <div className="row gx-0 d-none d-lg-flex">
+                <div className="row gx-0 d-none d-lg-flex ">
                     <div className="col-lg-7 px-5 text-start">
                         <div className="h-100 d-inline-flex align-items-center py-3 me-4">
                             <small className="fa fa-map-marker-alt text-primary me-2"></small>
@@ -65,18 +65,18 @@ export default function Navbar() {
             {/* <!-- Navbar End --> */}
 
            {/* Carousel Start */}
-            <div className="container-fluid p-0 mb-0" data-wow-delay="0.5s">
+            <div className="container-fluid p-0 mb-0 carousel-container" data-wow-delay="0.5s">
                 <div id="header-carousel" className="carousel slide" data-bs-ride="carousel">
                     <div className="carousel-inner">
                         <div className="carousel-item active" style={{maxHeight: '500px'}}>
-                            <img src="finder/mboppi.webp" alt="" className="w-100" />
+                            <img src="finder/mfound-yaounde.webp" alt="" className="w-100" />
                             <div className="carousel-caption d-flex align-items-center" >
                                 <div className="container align-items-center">
                                     <div className="row align-items-center justify-content-center justify-content-lg-start">
-                                        <div className="col-10 col-lg-7 text-center text-lg-start">
-                                            <h6 className="text-light mb-3 animated slideInDown">Online Rental Platform</h6>
-                                            <h1 className="display-5 text-light mb-4 pb-3 animated slideInDown">Rent a Store for your business</h1>
-                                            <a href="/about-us" className="btn btn-primary py-3 px-5 animated slideInDown">Learn More</a>
+                                        <div className="col-10 col-lg-7 text-center text-lg-start resize">
+                                            <h6 className="text-light mb-2 animated slideInDown">Online Rental Platform</h6>
+                                            <h1 className="text-light mb-3 animated slideInDown">Rent yout store online</h1>
+                                            <Link to="/about" className="btn btn-primary py-2 px-4 animated slideInDown">Learn More</Link>
                                         </div>
                                         <div className="col-lg-5 d-none d-lg-flex animated zoomIn">
                                             <img className="img-fluid" src="finder/carousel-4.jpg" alt="" />
@@ -87,14 +87,14 @@ export default function Navbar() {
                         </div>
 
                         <div className="carousel-item" style={{maxHeight: '500px'}}>
-                            <img src="finder/finder.webp" alt="" className="w-100" />
+                            <img src="finder/mfound-yaounde.webp" alt="" className="w-100" />
                             <div className="carousel-caption d-flex align-items-center">
                                 <div className="container">
                                     <div className="row align-items-center justify-content-center justify-content-lg-start">
                                         <div className="col-10 col-lg-7 text-center text-lg-start">
-                                            <h6 className="text-light mb-3 animated slideInDown">Online Rental Platform</h6>
-                                            <h1 className="display-5 text-light mb-4 pb-3 animated slideInDown">Pay for your Store Online</h1>
-                                            <a href="/about-us" className="btn btn-primary py-3 px-5 animated slideInDown">Learn More</a>
+                                            <h6 className="text-light mb-2 animated slideInDown">Online Rental Platform</h6>
+                                            <h1 className="text-light mb-3 animated slideInDown">Pay your Store Online</h1>
+                                            <a href="/about-us" className="btn btn-primary py-2 px-4 animated slideInDown">Learn More</a>
                                         </div>
                                         <div className="col-lg-5 d-none d-lg-flex animated zoomIn">
                                             <img className="img-fluid" src="finder/mokolo-yaounde.webp" alt="" />
@@ -110,9 +110,9 @@ export default function Navbar() {
                                 <div className="container">
                                     <div className="row align-items-center justify-content-center justify-content-lg-start">
                                         <div className="col-10 col-lg-7 text-center text-lg-start">
-                                            <h6 className="text-light mb-3 animated slideInDown">Online Rental Platform</h6>
-                                            <h1 className="display-5 text-light mb-4 pb-3 animated slideInDown">Get a store at your convenience</h1>
-                                            <a href="/about-us" className="btn btn-primary py-3 px-5 animated slideInDown">Learn More</a>
+                                            <h6 className="text-light mb-2 animated slideInDown">Online Rental Platform</h6>
+                                            <h1 className="text-light mb-3 animated slideInDown">Get a store at your convenience</h1>
+                                            <a href="/about-us" className="btn btn-primary py-2 px-4 animated slideInDown">Learn More</a>
                                         </div>
                                         <div className="col-lg-5 d-none d-lg-flex animated zoomIn">
                                             <img className="img-fluid" src="finder/baffousame.webp" alt="" />

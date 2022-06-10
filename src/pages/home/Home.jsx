@@ -9,7 +9,7 @@ export default function Home() {
             <Navbar />
             <Header />
             {/* Category Start */}
-            <div className="container-xxl py-5">
+            <div className="container-xxl">
                 <div className="container">
                     <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{maxWidth: '600px'}}>
                         <h1 className="mb-3">Store Categories</h1>
@@ -265,8 +265,8 @@ export default function Home() {
             {/* <!-- Property List End --> */}
 
             {/* Team Start */}
-            <div className="container-xxl py-5">
-                <div className="container py-5">
+            <div className="container-xxl ">
+                <div className="container">
                     <div className="text-center wow fadeInUp mb-5" data-wow-delay="0.1s">
                         <h1 className="mb-3">Our Team</h1>
                         <p>Meet our partners and team members with the most prominent stores for you</p>

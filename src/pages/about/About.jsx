@@ -8,26 +8,26 @@ export default function About() {
             <Nav />
             
             {/* <!-- Carousel Start --> */}
-            <div className="container-fluid p-0 mb-3">
-                <div id="header-carousel" className="carousel slide" data-bs-ride="carousel">
+            <div className="container-fluid p-0">
+                <div id="header-carousel" className="carousel slide " data-bs-ride="carousel">
                     <div className="carousel-inner">
-                        <div className="carousel-item active" style={{maxHeight: '300px'}}>
-                            <img className="w-100" src="finder/carousel-3.jpg" alt="" style={{objectFit: 'cover'}} />
+                        <div className="carousel-item active bg-dark" style={{maxHeight: '300px'}}>
+                            <img className="w-100" src="finder/bam-main.webp" alt="" style={{objectFit: 'cover'}} />
                             <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                                <div className="p-3" style={{maxWidth: '700px'}}>
-                                    <h6 className="section-title text-white text-uppercase mb-3 animated slideInDown">Online Store Rental Platform</h6>
-                                    <h1 className="display-3 text-white mb-4 animated slideInDown">Welcome to the About Us Page</h1>
+                                <div className="" style={{maxWidth: '700px'}}>
+                                    <h6 className="section-title text-white text-uppercase mb-2 animated slideInDown">Online Store Rental Platform</h6>
+                                    <h1 className="text-white mb-4 animated slideInDown">Welcome to know more About Us</h1>
                                     <a href="/about" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Rent Store</a>
                                     <a href="/about" className="btn btn-light py-md-3 px-md-5 animated slideInRight">Buy a Store</a>
                                 </div>
                             </div>
                         </div>
                         <div className="carousel-item" style={{maxHeight: '300px'}}>
-                            <img className="w-100" src="finder/carousel-4.jpg" alt="" style={{objectFit: 'cover'}} />
+                            <img className="w-100" src="finder/bam-main.webp" alt="" style={{objectFit: 'cover'}} />
                             <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                                <div className="p-3" style={{maxWidth: '700px'}}>
-                                    <h6 className="section-title text-white text-uppercase mb-3 animated slideInDown">Online Store Rental Platform</h6>
-                                    <h1 className="display-3 text-white mb-4 animated slideInDown">Welcome to the About Us page</h1>
+                                <div className="" style={{maxWidth: '700px'}}>
+                                    <h6 className="section-title text-white text-uppercase mb-2 animated slideInDown">Online Store Rental Platform</h6>
+                                    <h1 className="text-white mb-4 animated slideInDown">Finder is out to promote you businesses</h1>
                                     <a href="/about" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Rent Store</a>
                                     <a href="/about" className="btn btn-light py-md-3 px-md-5 animated slideInRight">Buy a Store</a>
                                 </div>
