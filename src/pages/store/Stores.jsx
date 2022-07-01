@@ -1,68 +1,10 @@
 import React, {  } from 'react'
-// import axios from 'axios';
-import Footer from '../../components/footer/Footer';
-import Nav from '../../components/nav/Nav';
 
 export default function Stores() {
-    // const [name, setName] = useState('')
-    // const [category, setCategory] = useState('')
-    // const [amount, setAmount] = useState('')
-    // const [description, setDescription] = useState('')
-    // const [purpose, setPurpose] = useState('')
-    // const [area, setArea] = useState('')
-    // const [location, setLocation] = useState('')
-    // const [image, setImage] = useState('')
-    
-    // useEffect(() => {
-    //     axios.get('http://127.0.0.1:8000/admin/store/').then((res) => {
-    //         console.log(res.data)
-    //     })
-    // }, []);
+  
     return (
         <>
-            <Nav />
-            {/* <!-- Carousel Start --> */}
-            <div className="container-fluid p-0">
-                <div id="header-carousel" className="carousel slide" data-bs-ride="carousel">
-                    <div className="carousel-inner">
-                        <div className="carousel-item active" style={{maxHeight: '300px'}}>
-                            <img className="w-100" src="finder/carousel-1.jpeg" alt="" />
-                            <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                                <div className="" style={{maxWidth: '700px'}}>
-                                    <h6 className="section-title text-white text-uppercase mb-2 animated slideInDown">Online Store Rental Platform</h6>
-                                    <h1 className="text-white mb-4 animated slideInDown">View amongst our listed items</h1>
-                                    <a href="/about" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Rent Store</a>
-                                    <a href="/about" className="btn btn-light py-md-3 px-md-5 animated slideInRight">Buy a Store</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="carousel-item" style={{maxHeight: '300px'}}>
-                            <img className="w-100" src="finder/carousel-2.jpeg" alt="" />
-                            <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                                <div className="" style={{maxWidth: '700px'}}>
-                                    <h6 className="section-title text-white text-uppercase mb-2 animated slideInDown">Online Store Rental Platform</h6>
-                                    <h1 className="text-white mb-4 animated slideInDown">We are happy to see your here!</h1>
-                                    <a href="/about" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Rent Store</a>
-                                    <a href="/about" className="btn btn-light py-md-3 px-md-5 animated slideInRight">Buy a Store</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button className="carousel-control-prev" type="button" data-bs-target="#header-carousel"
-                        data-bs-slide="prev">
-                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span className="visually-hidden">Previous</span>
-                    </button>
-                    <button className="carousel-control-next" type="button" data-bs-target="#header-carousel"
-                        data-bs-slide="next">
-                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span className="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </div>
-
-
-            {/* Team Start */}
+            {/* Property Listing */}
             <div className="container-xxl py-5">
                 <div className="container">
                     <div className="row g-0 gx-5 align-items-end">
@@ -223,7 +165,6 @@ export default function Stores() {
                 </div>
             </div>
             {/* <!-- Property List End --> */}
-            <Footer />
         </>
     )
 }

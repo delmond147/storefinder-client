@@ -1,11 +1,9 @@
 import React from 'react'
-import Nav from '../nav/Nav'
-import Footer from '../footer/Footer'
 
 export default function SignIn() {
   return (
     <>
-      <Nav />
+    
       <div className="content mt-5 ">
         
         <div className="container justify-content-center">
@@ -65,7 +63,7 @@ export default function SignIn() {
           </div>
         </div>
       </div>
-      <Footer />
+     
     </>
   )
 }

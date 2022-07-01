@@ -9,11 +9,15 @@ import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp';
 import Error from './pages/Error'
 import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/navbar/Navbar';
+import Footer from './components/footer/Footer';
+
 
 function App() {
     
   return (
     <div className="container-xxl bg-light p-0">
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -24,7 +28,8 @@ function App() {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="*" element={<Error />} />
-      </Routes>
+      </Routes> 
+      <Footer />
     </div>
   )
 }

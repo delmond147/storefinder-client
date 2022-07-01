@@ -1,54 +1,10 @@
 import React from 'react'
-import Footer from '../../components/footer/Footer'
-import Nav from '../../components/nav/Nav'
 
 export default function Booking() {
     return (
         <>
-            <Nav />
-            {/* <!-- Carousel Start --> */}
-            <div className="container-fluid p-0">
-                <div id="header-carousel" className="carousel slide" data-bs-ride="carousel">
-                    <div className="carousel-inner">
-                        <div className="carousel-item active" style={{maxHeight: '300px'}}>
-                            <img className="w-100" src="finder/mfound-yaounde.webp" alt="" />
-                            <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                                <div className="" style={{maxWidth: '700px'}}>
-                                    <h6 className="section-title text-white text-uppercase mb-2 animated slideInDown">Online Store Rental Platform</h6>
-                                    <h1 className="text-white mb-4 animated slideInDown">Find and book a store</h1>
-                                    <a href="/about" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Rent Store</a>
-                                    <a href="/about" className="btn btn-light py-md-3 px-md-5 animated slideInRight">Buy a Store</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="carousel-item" style={{maxHeight: '300px'}}>
-                            <img className="w-100" src="finder/mfound-yaounde.webp" alt="" />
-                            <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                                <div className="" style={{maxWidth: '700px'}}>
-                                    <h6 className="section-title text-white text-uppercase mb-2 animated slideInDown">Online Store Rental Platform</h6>
-                                    <h1 className="text-white mb-4 animated slideInDown">Online store rental made easy</h1>
-                                    <a href="/about" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Rent Store</a>
-                                    <a href="/about" className="btn btn-light py-md-3 px-md-5 animated slideInRight">Buy a Store</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button className="carousel-control-prev" type="button" data-bs-target="#header-carousel"
-                        data-bs-slide="prev">
-                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span className="visually-hidden">Previous</span>
-                    </button>
-                    <button className="carousel-control-next" type="button" data-bs-target="#header-carousel"
-                        data-bs-slide="next">
-                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span className="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </div>
-            {/* <!-- Carousel End --> */}
-
             {/* Booking start */}
-            <div className="container-fluid bg-secondary booking wow fadeInUp" data-wow-delay="0.1s">
+            <div className="container-fluid bg- booking wow fadeInUp" data-wow-delay="0.1s">
                 <div className="container">
                     <div className="row gx-5">
                         <div className="col-lg-6 py-5">
@@ -57,7 +13,7 @@ export default function Booking() {
                                 <p className="text-white text-center mb-0">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit. Sea dolore sanctus sed et. Takimata takimata sanctus sed.</p>
                             </div>
                         </div>
-                        <div className="col-lg-6">
+                        <div className="col-lg-6 mb-5 shadow">
                             <div className="bg-primary h-100 d-flex flex-column justify-content-center text-center p-5 wow zoomIn" data-wow-delay="0.6s">
                                 <h1 className="text-white mb-4">Book For A Store</h1>
                                 <form>
@@ -96,8 +52,8 @@ export default function Booking() {
                     </div>
                 </div>
             </div>
-    {/* <!-- Booking End --> */}
-            <Footer />
+            {/* <!-- Booking End --> */}
+            
         </>
     )
 }

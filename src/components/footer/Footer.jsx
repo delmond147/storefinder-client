@@ -35,22 +35,22 @@ export default function Footer() {
                         <h5 className="text-white mb-4">Store Gallery</h5>
                         <div className="row g-2 pt-2">
                             <div className="col-4">
-                                <img className="img-fluid rounded bg-light p-1" src="img/property-1.jpg" alt="" />
+                                <img className="img-fluid rounded bg-light p-1" src="store/store2.jpg" alt="" />
                             </div>
                             <div className="col-4">
-                                <img className="img-fluid rounded bg-light p-1" src="img/property-2.jpg" alt="" />
+                                <img className="img-fluid rounded bg-light p-1" src="store/store4.jpg" alt="" />
                             </div>
                             <div className="col-4">
-                                <img className="img-fluid rounded bg-light p-1" src="img/property-3.jpg" alt="" />
+                                <img className="img-fluid rounded bg-light p-1" src="store/store1.jpg" alt="" />
                             </div>
                             <div className="col-4">
-                                <img className="img-fluid rounded bg-light p-1" src="img/property-4.jpg" alt="" />
+                                <img className="img-fluid rounded bg-light p-1" src="store/store3.jpg" alt="" />
                             </div>
                             <div className="col-4">
-                                <img className="img-fluid rounded bg-light p-1" src="img/property-5.jpg" alt="" />
+                                <img className="img-fluid rounded bg-light p-1" src="store/store6.jpg" alt="" />
                             </div>
                             <div className="col-4">
-                                <img className="img-fluid rounded bg-light p-1" src="img/property-6.jpg" alt="" />
+                                <img className="img-fluid rounded bg-light p-1" src="store/store5.jpg" alt="" />
                             </div>
                         </div>
                     </div>
@@ -69,7 +69,7 @@ export default function Footer() {
                     <div className="row">
                         <div className="text-md-center mb-0">
                             <div className="text-center">
-                                &copy; Copyright  <a className="text-primary" href="/">FINDER</a> All Right Reserved.
+                                &copy; Copyright  <a className="text-primary" href="/">Finder</a> All Right Reserved.
                             </div> 
 							
 							{/* This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. */}
