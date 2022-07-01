@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import Carousel from '../carousel/Carousel'
 
 export default function Navbar() {
     return (
@@ -56,85 +57,18 @@ export default function Navbar() {
                                 <a href="http://127.0.0.1:8000/admin/store" className="bg-dark btn btn-primary dropdown-item">Add Store<i className="fa fa-arrow-right ms-2"></i></a>
                             </div>
                         </div>
+
                         <Link to="/contact" className="nav-item nav-link">Contact</Link>
                         
                     </div>
-                    <Link to="/signin" className="btn btn-primary py-3 px-lg-3 d-none d-lg-block">Sign In<i className="fa fa-arrow-right ms-3"></i></Link>
+                    <Link to="/signin" className="btn btn-primary py-3 px-lg-4 d-none d-lg-block me-3">Login</Link>
+                    <Link to="/signup" className="btn btn-primary py-3 px-lg-3 d-none d-lg-block me-3">Register</Link>
                 </div>
             </nav>
             {/* <!-- Navbar End --> */}
 
-           {/* Carousel Start */}
-            <div className="container-fluid p-0 mb-0 carousel-container" data-wow-delay="0.5s">
-                <div id="header-carousel" className="carousel slide" data-bs-ride="carousel">
-                    <div className="carousel-inner">
-                        <div className="carousel-item active" style={{maxHeight: '500px'}}>
-                            <img src="finder/mfound-yaounde.webp" alt="" className="w-100" />
-                            <div className="carousel-caption d-flex align-items-center" >
-                                <div className="container align-items-center">
-                                    <div className="row align-items-center justify-content-center justify-content-lg-start">
-                                        <div className="col-10 col-lg-7 text-center text-lg-start resize">
-                                            <h6 className="text-light mb-2 animated slideInDown">Online Rental Platform</h6>
-                                            <h1 className="text-light mb-3 animated slideInDown">Rent yout store online</h1>
-                                            <Link to="/about" className="btn btn-primary py-2 px-4 animated slideInDown">Learn More</Link>
-                                        </div>
-                                        <div className="col-lg-5 d-none d-lg-flex animated zoomIn">
-                                            <img className="img-fluid" src="finder/carousel-4.jpg" alt="" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="carousel-item" style={{maxHeight: '500px'}}>
-                            <img src="finder/mfound-yaounde.webp" alt="" className="w-100" />
-                            <div className="carousel-caption d-flex align-items-center">
-                                <div className="container">
-                                    <div className="row align-items-center justify-content-center justify-content-lg-start">
-                                        <div className="col-10 col-lg-7 text-center text-lg-start">
-                                            <h6 className="text-light mb-2 animated slideInDown">Online Rental Platform</h6>
-                                            <h1 className="text-light mb-3 animated slideInDown">Pay your Store Online</h1>
-                                            <a href="/about-us" className="btn btn-primary py-2 px-4 animated slideInDown">Learn More</a>
-                                        </div>
-                                        <div className="col-lg-5 d-none d-lg-flex animated zoomIn">
-                                            <img className="img-fluid" src="finder/mokolo-yaounde.webp" alt="" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="carousel-item" style={{maxHeight: '500px'}}>
-                            <img src="finder/mfound-yaounde.webp" alt="" className="w-100" />
-                            <div className="carousel-caption d-flex align-items">
-                                <div className="container">
-                                    <div className="row align-items-center justify-content-center justify-content-lg-start">
-                                        <div className="col-10 col-lg-7 text-center text-lg-start">
-                                            <h6 className="text-light mb-2 animated slideInDown">Online Rental Platform</h6>
-                                            <h1 className="text-light mb-3 animated slideInDown">Get a store at your convenience</h1>
-                                            <a href="/about-us" className="btn btn-primary py-2 px-4 animated slideInDown">Learn More</a>
-                                        </div>
-                                        <div className="col-lg-5 d-none d-lg-flex animated zoomIn">
-                                            <img className="img-fluid" src="finder/baffousame.webp" alt="" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button className="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
-                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span className="visually-hidden">Previous</span>
-                    </button>
-                    <button className="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
-                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span className="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </div>
-            {/* Carousel End */}
-
+            <Carousel />
         </>
     )
 }
+

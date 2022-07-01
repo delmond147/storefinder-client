@@ -1,16 +1,14 @@
 import React from 'react'
-import Nav from '../nav/Nav'
-import Footer from '../footer/Footer'
 
 export default function SignUp() {
   return (
     <>
-      <Nav />
+    
       <div className="content mt-5">
         <div className="container justify-content-center">
           <div className="row">
             <div className="col-md-6 p-3 mt-5 justify-content-center">
-              <img src="images/logo.svg" alt="" className="img-fluid h-auto" />
+              <img src="images/bg_1.jpg" alt="" className="img-fluid h-auto" />
             </div>
             <div className="col-md-6 contents">
               <div className="row justify-content-center">
@@ -27,16 +25,16 @@ export default function SignUp() {
 
                     <div className="form-group first mb-2">
                       <label for="username">Email</label>
-                      <input type="email" className="form-control py-3" id="username" />
+                      <input type="email" className="form-control py-3" id="email" />
                     </div>
 
-                    <div className="form-group last mb-4">
+                    <div className="form-group last mb-2">
                       <label for="password">Password</label>
                       <input type="password" className="form-control py-3" id="password" />
 
                     </div>
 
-                    <div className="form-group last mb-4">
+                    <div className="form-group last mb-2">
                       <label for="password">Comfirm Password</label>
                       <input type="password" className="form-control py-3" id="password" />
 
@@ -58,10 +56,10 @@ export default function SignUp() {
 
                     <div className="social-login">
                       <a href="facebook.com/delmond" className="facebook btn d-flex justify-content-center align-items-center">
-                        <span className="icon-facebook mr-3"></span> SignUn with Facebook
+                        <span className="icon-facebook mr-3"></span> SignUp with Facebook
                       </a>
                       <a href="google.com/delmondbongha" className="google btn d-flex justify-content-center align-items-center">
-                        <span className="icon-google mr-3"></span> SignUn with Google
+                        <span className="icon-google mr-3"></span> SignUp with Google
                       </a>
                     </div>
                   </form>
@@ -73,7 +71,6 @@ export default function SignUp() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   )
 }

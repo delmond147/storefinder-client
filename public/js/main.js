@@ -84,6 +84,9 @@
             }
         }
     });
+
+    new WOW().init();
+
     
 })(jQuery);
 

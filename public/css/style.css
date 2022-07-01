@@ -4,6 +4,12 @@
     --secondary: #FF6922;
     --light: #EFFDF5;
     --dark: #0E2E50;
+    --danger: #dc3545;
+    --success: #198754;
+    --warning: #ffc107;
+    --infor: #0dcaf0;
+    --orange: #fd7e14;
+    --bprimary: #0d6efd;
 }
 
 .back-to-top {
@@ -168,9 +174,7 @@
     }
 }
 
-.carousel-container img{
-    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7));
-}
+
 
 .header-carousel .owl-nav {
     position: absolute;
@@ -887,7 +891,7 @@ h2 {
 .error-wrapper {
 
     width: 100%;
-    height: 60vh;
+    height:88vh;
     background: url('../images/bg.png');
     position: center;
     /* background-size: cover; */
