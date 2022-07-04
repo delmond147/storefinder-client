@@ -1,111 +1,15 @@
 import React from 'react'
+import Carousel from '../../components/carousel/Carousel'
 import Header from '../../components/header/Header'
-// import Navbar from '../../components/navbar/Navbar'
+import Category from '../category/Category'
+import Team from '../team/Team'
 
 export default function Home() {
     return (
         <>
+            <Carousel />
             <Header />
-            {/* Category Start */}
-            <div className="container-xxl">
-                <div className="container">
-                    <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{maxWidth: '600px'}}>
-                        <h1 className="mb-3">Store Categories</h1>
-                        <p>Select a category to see more information about that particular category and also see the number of items available in that category</p>
-                    </div>
-                    <div className="row g-4">
-                        <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <a className="cat-item d-block bg-light text-center rounded p-3" href="/stores">
-                                <div className="rounded p-4">
-                                    <div className="icon mb-3">
-                                        <img className="img-fluid" src="img/icon-apartment.png" alt="Icon" />
-                                    </div>
-                                    <h6>SUPER MARKETS</h6>
-                                    <span>3 ITEMS</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                            <a className="cat-item d-block bg-light text-center rounded p-3" href="/stores">
-                                <div className="rounded p-4">
-                                    <div className="icon mb-3">
-                                        <img className="img-fluid" src="img/icon-villa.png" alt="Icon" />
-                                    </div>
-                                    <h6>GROCERY STORE</h6>
-                                    <span>2 ITEMS</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                            <a className="cat-item d-block bg-light text-center rounded p-3" href="/stores">
-                                <div className="rounded p-4">
-                                    <div className="icon mb-3">
-                                        <img className="img-fluid" src="img/icon-house.png" alt="Icon" />
-                                    </div>
-                                    <h6>BOOK STORE</h6>
-                                    <span>5 ITEMS</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                            <a className="cat-item d-block bg-light text-center rounded p-3" href="/stores">
-                                <div className="rounded p-4">
-                                    <div className="icon mb-3">
-                                        <img className="img-fluid" src="img/icon-housing.png" alt="Icon" />
-                                    </div>
-                                    <h6>FASION STORES</h6>
-                                    <span>6 ITEMS</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <a className="cat-item d-block bg-light text-center rounded p-3" href="/stores">
-                                <div className="rounded p-4">
-                                    <div className="icon mb-3">
-                                        <img className="img-fluid" src="img/icon-building.png" alt="Icon" />
-                                    </div>
-                                    <h6>GROCERY STORE</h6>
-                                    <span>123 Properties</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                            <a className="cat-item d-block bg-light text-center rounded p-3" href="/stores">
-                                <div className="rounded p-4">
-                                    <div className="icon mb-3">
-                                        <img className="img-fluid" src="img/icon-neighborhood.png" alt="Icon" />
-                                    </div>
-                                    <h6>OFFICES</h6>
-                                    <span>12 Properties</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                            <a className="cat-item d-block bg-light text-center rounded p-3" href="/stores">
-                                <div className="rounded p-4">
-                                    <div className="icon mb-3">
-                                        <img className="img-fluid" src="img/icon-condominium.png" alt="Icon" />
-                                    </div>
-                                    <h6>PHARMACY</h6>
-                                    <span>4 Properties</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                            <a className="cat-item d-block bg-light text-center rounded p-3" href="/stores">
-                                <div className="rounded p-4">
-                                    <div className="icon mb-3">
-                                        <img className="img-fluid" src="img/icon-luxury.png" alt="Icon" />
-                                    </div>
-                                    <h6>SALONE</h6>
-                                    <span>8 Properties</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/* Category End */}
+            <Category />
 
             {/* <!-- Property List Start --> */}
             <div className="container-xxl py-5">
@@ -149,7 +53,7 @@ export default function Home() {
                                         <div className="d-flex border-top">
                                             <small className="flex-fill text-center border-end py-2"><i className="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
                                             <small className="flex-fill text-center border-end py-2"><i className="fa fa-bed text-primary me-2"></i>5 rooms</small>
-                                            <a href="/booking" className="btn btn-primary py-3 px-5">Rent</a>  
+                                            <a href="/booking" className="btn btn-dark py-3 px-5">Rent</a>  
                                         </div>
                                     </div>
                                 </div>
@@ -168,7 +72,7 @@ export default function Home() {
                                         <div className="d-flex border-top">
                                             <small className="flex-fill text-center border-end py-2"><i className="fa fa-ruler-combined text-primary me-2"></i>800 Sqft</small>
                                             <small className="flex-fill text-center border-end py-2"><i className="fa fa-bed text-primary me-2"></i>3 rooms</small>
-                                            <a href="/booking" className="btn btn-primary py-3 px-5">Rent</a>  
+                                            <a href="/booking" className="btn btn-dark py-3 px-5">Rent</a>  
                                         </div>
                                     </div>
                                 </div>
@@ -187,7 +91,7 @@ export default function Home() {
                                         <div className="d-flex border-top">
                                             <small className="flex-fill text-center border-end py-2"><i className="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
                                             <small className="flex-fill text-center border-end py-2"><i className="fa fa-bed text-primary me-2"></i>4 sections</small>
-                                            <a href="/booking" className="btn btn-primary py-3 px-5">Buy</a>  
+                                            <a href="/booking" className="btn btn-dark py-3 px-5">Buy</a>  
                                         </div>
                                     </div>
                                 </div>
@@ -210,7 +114,7 @@ export default function Home() {
                                         <div className="d-flex border-top">
                                             <small className="flex-fill text-center border-end py-2"><i className="fa fa-ruler-combined text-primary me-2"></i>2000 Sqft</small>
                                             <small className="flex-fill text-center border-end py-2"><i className="fa fa-bed text-primary me-2"></i>3 sections</small>
-                                            <a href="/booking" className="btn btn-primary py-3 px-5">Buy</a>  
+                                            <a href="/booking" className="btn btn-dark py-3 px-5">Buy</a>  
                                         </div>
                                     </div>
                                 </div>
@@ -229,7 +133,7 @@ export default function Home() {
                                         <div className="d-flex border-top">
                                             <small className="flex-fill text-center border-end py-2"><i className="fa fa-ruler-combined text-primary me-2"></i>300 Sqft</small>
                                             <small className="flex-fill text-center border-end py-2"><i className="fa fa-bed text-primary me-2"></i>no rooms</small>
-                                            <a href="/booking" className="btn btn-primary py-3 px-5">Rent</a>  
+                                            <a href="/booking" className="btn btn-dark py-3 px-5">Rent</a>  
                                         </div>
                                     </div>
                                 </div>
@@ -248,12 +152,12 @@ export default function Home() {
                                         <div className="d-flex border-top">
                                             <small className="flex-fill text-center border-end py-2"><i className="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
                                             <small className="flex-fill text-center border-end py-2"><i className="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                            <a href="/booking" className="btn btn-primary py-3 px-5">Rent</a>  
+                                            <a href="/booking" className="btn btn-dark py-3 px-5">Rent</a>  
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
-                                    <a className="btn btn-primary py-3 px-5" href="/stores">Browse More Stores</a>
+                                    <a className="btn btn-dark py-3 px-5" href="/stores">Browse More Stores</a>
                                 </div>
                             </div>
                         </div>
@@ -262,89 +166,7 @@ export default function Home() {
             </div>
             {/* <!-- Property List End --> */}
 
-            {/* Team Start */}
-            <div className="container-xxl ">
-                <div className="container">
-                    <div className="text-center wow fadeInUp mb-5" data-wow-delay="0.1s">
-                        <h1 className="mb-3">Our Team</h1>
-                        <p>Meet our partners and team members with the most prominent stores for you</p>
-                    </div>
-                    <div className="row g-4">
-                        <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                            <div className="team-item p-4">
-                                <div className="overflow-hidden mb-4">
-                                    <img className="img-fluid" src="img/team-6.jpg" alt="" />
-                                </div>
-                                <h5 className="mb-0">Tufoin Carissa</h5>
-                                <p>CFO at "FINDER"</p>
-                                <div className="btn-slide mt-1">
-                                    <i className="fa fa-share"></i>
-                                    <span>
-                                        <a href="/team"><i className="fab fa-facebook-f"></i></a>
-                                        <a href="/team"><i className="fab fa-twitter"></i></a>
-                                        <a href="/team"><i className="fab fa-instagram"></i></a>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                            <div className="team-item p-4">
-                                <div className="overflow-hidden mb-4">
-                                    <img className="img-fluid" src="img/team-5.png" alt="" />
-                                </div>
-                                <h5 className="mb-0">Delmond Bongha</h5>
-                                <p>CEO & Founder at "FINDER" & Full Stack Developer</p>
-                                <div className="btn-slide mt-1" >
-                                    <i className="fa fa-share"></i>
-                                    <span>
-                                        <a href="/team"><i className="fab fa-facebook-f"></i></a>
-                                        <a href="/team"><i className="fab fa-twitter"></i></a>
-                                        <a href="/team"><i className="fab fa-instagram"></i></a>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                            <div className="team-item p-4">
-                                <div className="overflow-hidden mb-4">
-                                    <img className="img-fluid" src="img/team-3.jpg" alt="" />
-                                </div>
-                                <h5 className="mb-0">Nfor Nadia</h5>
-                                <p>Sales Manager & Project planner</p>
-                                <div className="btn-slide mt-1" >
-                                    <i className="fa fa-share"></i>
-                                    <span>
-                                        <a href="/team"><i className="fab fa-facebook-f"></i></a>
-                                        <a href="/team"><i className="fab fa-twitter"></i></a>
-                                        <a href="/team"><i className="fab fa-instagram"></i></a>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                            <div className="team-item p-4">
-                                <div className="overflow-hidden mb-4">
-                                    <img className="img-fluid" src="img/team-4.jpg" alt="" />
-                                </div>
-                                <h5 className="mb-0">Fonki Britney</h5>
-                                <p>COO at "FINDER & Content Creator"</p>
-                                <div className="btn-slide mt-1" >
-                                    <i className="fa fa-share"></i>
-                                    <span>
-                                        <a href="/team"><i className="fab fa-facebook-f"></i></a>
-                                        <a href="/team"><i className="fab fa-twitter"></i></a>
-                                        <a href="/team"><i className="fab fa-instagram"></i></a>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/* Team End */}
+            <Team />
         
         </>
     )

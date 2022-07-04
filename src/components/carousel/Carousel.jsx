@@ -13,8 +13,8 @@ function Carousel() {
                                 <div className="" style={{maxWidth: '700px'}}>
                                     <h6 className="section-title text-white text-uppercase mb-2 animated slideInDown">Online Store Rental Platform</h6>
                                     <h1 className="text-white mb-4 animated slideInDown">Find and book a store</h1>
-                                    <a href="/about" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Rent Store</a>
-                                    <a href="/about" className="btn btn-light py-md-3 px-md-5 animated slideInRight">Buy a Store</a>
+                                    <a href="/signin" className="btn btn-primary py-md-4 px-md-5 me-3 animated slideInLeft">Rent Store</a>
+                                    <a href="/signin" className="btn btn-primary py-md-4 px-md-5 animated slideInRight">Buy a Store</a>
                                 </div>
                             </div>
                         </div>
@@ -24,8 +24,8 @@ function Carousel() {
                                 <div className="" style={{maxWidth: '700px'}}>
                                     <h6 className="section-title text-white text-uppercase mb-2 animated slideInDown">Online Store Rental Platform</h6>
                                     <h1 className="text-white mb-4 animated slideInDown">Online store rental made easy</h1>
-                                    <a href="/about" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Rent Store</a>
-                                    <a href="/about" className="btn btn-light py-md-3 px-md-5 animated slideInRight">Buy a Store</a>
+                                    <a href="/signin" className="btn btn-primary py-md-4 px-md-5 me-3 animated slideInLeft">Rent Store</a>
+                                    <a href="/signin" className="btn btn-primary py-md-4 px-md-5 animated slideInRight">Buy a Store</a>
                                 </div>
                             </div>
                         </div>

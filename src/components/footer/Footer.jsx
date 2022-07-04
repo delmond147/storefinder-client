@@ -1,8 +1,6 @@
 import React from 'react'
-
+// import {Link} from 'react-router-dom'
 export default function Footer() {
-    const date = new Date()
-    date.getFullYear()
 
   return (
 
@@ -17,10 +15,10 @@ export default function Footer() {
                         <p className="mb-2 text-white"><i className="fa fa-phone-alt me-3"></i>+237680749528</p>
                         <p className="mb-2 text-white"><i className="fa fa-envelope me-3"></i>dyingchuo@gmail.com</p>
                         <div className="d-flex pt-2">
-                            <a className="btn btn-outline-light btn-social" href="#home"><i className="fab fa-twitter"></i></a>
-                            <a className="btn btn-outline-light btn-social" href="#home"><i className="fab fa-facebook-f"></i></a>
-                            <a className="btn btn-outline-light btn-social" href="#home"><i className="fab fa-youtube"></i></a>
-                            <a className="btn btn-outline-light btn-social" href="#home"><i className="fab fa-linkedin-in"></i></a>
+                            <a className="btn btn-secondary btn-social" href="#home"><i className="fab fa-twitter"></i></a>
+                            <a className="btn btn-secondary btn-social" href="#home"><i className="fab fa-facebook-f"></i></a>
+                            <a className="btn btn-secondary btn-social" href="#home"><i className="fab fa-youtube"></i></a>
+                            <a className="btn btn-secondary btn-social" href="#home"><i className="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-6">
@@ -59,7 +57,7 @@ export default function Footer() {
                         <p className="text-white">Sign up to get the leatest trends and post from our platform.</p>
                         <div className="position-relative mx-auto" style={{maxWidth: '400px'}}>
                             <input className="text-white-50 form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email" />
-                            <a href="email" type="button" className="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</a>
+                            <a href="email" type="button" className="btn btn-secondary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</a>
                         </div>
                     </div>
                 </div>
@@ -69,12 +67,12 @@ export default function Footer() {
                     <div className="row">
                         <div className="text-md-center mb-0">
                             <div className="text-center">
-                                &copy; Copyright  <a className="text-primary" href="/">Finder</a> All Right Reserved.
+                                &copy; Copyright  <a className="text-secondary" href="/">Finder</a> All Right Reserved.
                             </div> 
 							
 							{/* This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. */}
 							<div className="text-center">
-                                Designed By <a className="text-primary" href="/dgitech">Dgitech</a>
+                                Designed By <a className="text-secondary" href="/dgitech">Dgitech</a>
                             </div>
                         </div>
                     </div>
@@ -84,7 +82,7 @@ export default function Footer() {
         {/* Footer End */}
 
         {/* Back to Top */}
-        {/* <a href="#" className="btn btn-lg btn-primary btn-lg-square back-to-top"><i className="bi bi-arrow-up"></i></a> */}
+        {/* <Link to="/" className="btn btn-lg btn-secondary btn-lg-square back-to-top"><i className="bi bi-arrow-up"></i></Link> */}
 
     </>
   )
