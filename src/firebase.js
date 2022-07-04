@@ -1,7 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getDatabase } from 'firebase/database'
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite'
+import { getAuth } from 'firebase/auth'
 
 const firebaseConfig = {
   apiKey: "AIzaSyDhIUIWzzhkfojCvLdoBDxkEnPJMFAOlr4",
@@ -16,14 +15,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const database = getDatabase(app)
-const db = getFirestore(app)
+export const auth = getAuth(app)
+export default app
 
-// Get a list of cities from database
 
-async function getCities(db) {
-  const citiesCol = collection(db, 'cities')
-  const citySnapshot = await getDocs(citiesCol)
-  const cityList = citySnapshot.docs.map(doc => doc.data())
-  return cityList
-}

@@ -1,8 +1,10 @@
 import React from 'react'
+import Carousel from '../../components/carousel/Carousel';
 
 export default function About() {
     return (
         <>
+            <Carousel />
             {/* About Start */}
             <div className="container-xxl service py-5">
                 <div className="container">

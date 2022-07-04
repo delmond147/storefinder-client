@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #00B98E;
+    --primary: #F6BD10;
     --secondary: #FF6922;
     --light: #EFFDF5;
     --dark: #0E2E50;
@@ -10,6 +10,8 @@
     --infor: #0dcaf0;
     --orange: #fd7e14;
     --bprimary: #0d6efd;
+    --bgcolor: #00B98E;
+    --bgp: #F6BD10;
 }
 
 .back-to-top {
@@ -35,10 +37,15 @@
     opacity: 1;
 }
 
-
+.hov:hover{
+    color: var(--secondary);
+}
 /*** Button ***/
 .btn {
     transition: .5s;
+}
+.btn:hover{
+    background-color: var(--secondary);
 }
 
 .btn.btn-primary,
@@ -89,7 +96,7 @@
 }
 
 .navbar {
-    box-shadow: 0 0 30px rgba(0, 0, 0, .08);
+    box-shadow: 0 0 30px rgba(17, 16, 16, 0.08);
 }
 
 .navbar .dropdown-toggle::after {
@@ -251,7 +258,7 @@
 /*** Category ***/
 .cat-item div {
     background: #FFFFFF;
-    border: 1px dashed rgba(0, 185, 142, .3);
+    border: 1px dashed rgba(34, 194, 34, 0.3);
     transition: .5s;
 }
 
@@ -279,6 +286,11 @@
     color: #FFFFFF;
 }
 
+
+.property-item img{
+    width: 500px;
+    height: 300px;
+}
 .property-item {
     box-shadow: 0 0 30px rgba(0, 0, 0, .08);
 }
@@ -291,19 +303,18 @@
     transform: scale(1.1);
 }
 
-.property-item .border-top {
-    border-top: 1px dashed rgba(0, 185, 142, .3) !important;
-}
-
-.property-item .border-end {
-    border-right: 1px dashed rgba(0, 185, 142, .3) !important;
-}
 
 
 /*** Team ***/
+
+.team-item img {
+    width: 450px;
+    height: 250px;
+}
 .team-item {
     box-shadow: 0 0 30px rgba(0, 0, 0, .08);
     transition: .5s;
+    height: 450px;
 }
 
 .team-item .btn {
@@ -328,6 +339,7 @@
 .team-item:hover .bg-primary i {
     color: var(--secondary) !important;
 }
+
 
 
 /*** Testimonial ***/
@@ -534,58 +546,6 @@
 .price-item a.btn-slide:hover i,
 .price-item a.btn-slide:hover span {
     background: var(--secondary);
-}
-
-
-
-
-/* About and Booking */
-
-/*** About ***/
-.service .nav .nav-link {
-    background: var(--light);
-    transition: .5s;
-}
-
-.service .nav .nav-link.active {
-    background: var(--primary);
-}
-
-.service .nav .nav-link.active h4 {
-    color: #FFFFFF !important;
-}
-
-
-/*** Booking ***/
-.booking {
-    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/carousel-bg-2.jpg) center center no-repeat;
-    background-size: cover;
-}
-
-.bootstrap-datetimepicker-widget.bottom {
-    top: auto !important;
-}
-
-.bootstrap-datetimepicker-widget .table * {
-    border-bottom-width: 0px;
-}
-
-.bootstrap-datetimepicker-widget .table th {
-    font-weight: 500;
-}
-
-.bootstrap-datetimepicker-widget.dropdown-menu {
-    padding: 10px;
-    border-radius: 2px;
-}
-
-.bootstrap-datetimepicker-widget table td.active,
-.bootstrap-datetimepicker-widget table td.active:hover {
-    background: var(--primary);
-}
-
-.bootstrap-datetimepicker-widget table td.today::before {
-    border-bottom-color: var(--primary);
 }
 
 

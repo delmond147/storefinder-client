@@ -1,10 +1,12 @@
 import React, {  } from 'react'
+import Carousel from '../../components/carousel/Carousel'
 
 export default function Stores() {
   
     return (
         <>
-            {/* Property Listing */}
+            <Carousel />
+            {/* <!-- Store Listing --> */}
             <div className="container-xxl py-5">
                 <div className="container">
                     <div className="row g-0 gx-5 align-items-end">
@@ -31,11 +33,10 @@ export default function Stores() {
                     <div className="tab-content">
                         <div id="tab-1" className="tab-pane fade show p-0 active">
                             <div className="row g-4">
-                                
-                                <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" >
                                     <div className="property-item rounded overflow-hidden">
                                         <div className="position-relative overflow-hidden">
-                                            <img className="img-fluid" src="img/property-1.jpg" alt="" />
+                                            <img className="img-fluid" src="store/store1.jpg" alt="" />
                                             <div className="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
                                             <div className="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Office</div>
                                         </div>
@@ -47,16 +48,14 @@ export default function Stores() {
                                         <div className="d-flex border-top">
                                             <small className="flex-fill text-center border-end py-2"><i className="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
                                             <small className="flex-fill text-center border-end py-2"><i className="fa fa-bed text-primary me-2"></i>5 rooms</small>
-                                            <a href="/booking" className="btn btn-primary py-3 px-5 ">Rent</a>  
+                                            <a href="/booking" className="btn btn-dark py-3 px-5">Rent</a>  
                                         </div>
                                     </div>
                                 </div>
-
-
                                 <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                                     <div className="property-item rounded overflow-hidden">
                                         <div className="position-relative overflow-hidden">
-                                            <img className="img-fluid" src="img/property-2.jpg" alt="" />
+                                            <img className="img-fluid" src="store/store2.jpg" alt="" />
                                             <div className="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
                                             <div className="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Pharmacy</div>
                                         </div>
@@ -68,16 +67,14 @@ export default function Stores() {
                                         <div className="d-flex border-top">
                                             <small className="flex-fill text-center border-end py-2"><i className="fa fa-ruler-combined text-primary me-2"></i>800 Sqft</small>
                                             <small className="flex-fill text-center border-end py-2"><i className="fa fa-bed text-primary me-2"></i>3 rooms</small>
-                                            <a href="/booking" className="btn btn-primary py-3 px-5">Rent</a>  
+                                            <a href="/booking" className="btn btn-dark py-3 px-5">Rent</a>  
                                         </div>
                                     </div>
                                 </div>
-
-
                                 <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                                     <div className="property-item rounded overflow-hidden">
                                         <div className="position-relative overflow-hidden">
-                                            <img className="img-fluid" src="img/property-3.jpg" alt="" />
+                                            <img className="img-fluid" src="store/store3.jpg" alt="" />
                                             <div className="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
                                             <div className="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Super Market</div>
                                         </div>
@@ -89,16 +86,18 @@ export default function Stores() {
                                         <div className="d-flex border-top">
                                             <small className="flex-fill text-center border-end py-2"><i className="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
                                             <small className="flex-fill text-center border-end py-2"><i className="fa fa-bed text-primary me-2"></i>4 sections</small>
-                                            <a href="/booking" className="btn btn-primary py-3 px-5">Buy</a>  
+                                            <a href="/booking" className="btn btn-dark py-3 px-5">Buy</a>  
                                         </div>
                                     </div>
                                 </div>
 
 
+
+                                
                                 <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                                     <div className="property-item rounded overflow-hidden">
                                         <div className="position-relative overflow-hidden">
-                                            <img className="img-fluid" src="img/property-4.jpg" alt="" />
+                                            <img className="img-fluid" src="store/store4.jpg" alt="" />
                                             <div className="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
                                             <div className="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Patrol Station</div>
                                         </div>
@@ -110,16 +109,14 @@ export default function Stores() {
                                         <div className="d-flex border-top">
                                             <small className="flex-fill text-center border-end py-2"><i className="fa fa-ruler-combined text-primary me-2"></i>2000 Sqft</small>
                                             <small className="flex-fill text-center border-end py-2"><i className="fa fa-bed text-primary me-2"></i>3 sections</small>
-                                            <a href="/booking" className="btn btn-primary py-3 px-5">Buy</a>  
+                                            <a href="/booking" className="btn btn-dark py-3 px-5">Buy</a>  
                                         </div>
                                     </div>
                                 </div>
-
-
                                 <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                                     <div className="property-item rounded overflow-hidden">
                                         <div className="position-relative overflow-hidden">
-                                            <img className="img-fluid" src="img/property-5.jpg" alt="" />
+                                            <img className="img-fluid" src="store/store5.jpg" alt="" />
                                             <div className="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
                                             <div className="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Grocery Store</div>
                                         </div>
@@ -131,16 +128,14 @@ export default function Stores() {
                                         <div className="d-flex border-top">
                                             <small className="flex-fill text-center border-end py-2"><i className="fa fa-ruler-combined text-primary me-2"></i>300 Sqft</small>
                                             <small className="flex-fill text-center border-end py-2"><i className="fa fa-bed text-primary me-2"></i>no rooms</small>
-                                            <a href="/booking" className="btn btn-primary py-3 px-5">Rent</a>  
+                                            <a href="/booking" className="btn btn-dark py-3 px-5">Rent</a>  
                                         </div>
                                     </div>
                                 </div>
-
-
                                 <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                                     <div className="property-item rounded overflow-hidden">
                                         <div className="position-relative overflow-hidden">
-                                            <img className="img-fluid" src="img/property-6.jpg" alt="" />
+                                            <img className="img-fluid" src="store/store6.jpg" alt="" />
                                             <div className="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
                                             <div className="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Barbing Salone</div>
                                         </div>
@@ -152,19 +147,19 @@ export default function Stores() {
                                         <div className="d-flex border-top">
                                             <small className="flex-fill text-center border-end py-2"><i className="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
                                             <small className="flex-fill text-center border-end py-2"><i className="fa fa-bed text-primary me-2"></i>3 Bed</small>
-                                            <a href="/booking" className="btn btn-primary py-3 px-5">Rent</a>  
+                                            <a href="/booking" className="btn btn-dark py-3 px-5">Rent</a>  
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
-                                    <a className="btn btn-primary py-3 px-5" href="/stores">Browse More Stores</a>
+                                    <a className="btn btn-dark py-3 px-5" href="/stores">Browse More Stores</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            {/* <!-- Property List End --> */}
+            {/* <!-- Store Listing End --> */}
         </>
     )
 }
