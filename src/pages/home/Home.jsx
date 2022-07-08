@@ -3,10 +3,13 @@ import Carousel from '../../components/carousel/Carousel'
 import Header from '../../components/header/Header'
 import Category from '../category/Category'
 import Team from '../team/Team'
+import Navbar from '../../components/navbar/Navbar'
+import Footer from '../../components/footer/Footer'
 
 export default function Home() {
     return (
         <>
+            <Navbar />
             <Carousel />
             <Header />
             <Category />
@@ -167,6 +170,7 @@ export default function Home() {
             {/* <!-- Property List End --> */}
 
             <Team />
+            <Footer />
         
         </>
     )

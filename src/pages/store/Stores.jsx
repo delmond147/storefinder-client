@@ -1,10 +1,13 @@
 import React, {  } from 'react'
 import Carousel from '../../components/carousel/Carousel'
+import Navbar from '../../components/navbar/Navbar'
+import Footer from '../../components/footer/Footer'
 
 export default function Stores() {
   
     return (
         <>
+            <Navbar />
             <Carousel />
             {/* <!-- Store Listing --> */}
             <div className="container-xxl py-5">
@@ -160,6 +163,7 @@ export default function Stores() {
                 </div>
             </div>
             {/* <!-- Store Listing End --> */}
+            <Footer />
         </>
     )
 }
