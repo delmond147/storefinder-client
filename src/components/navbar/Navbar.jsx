@@ -52,7 +52,7 @@ export default function Navbar() {
                             <div className="dropdown-menu fade-up m-0">
                                 <Link to="/stores" className="dropdown-item">Stores</Link>
                                 <Link to="/booking" className="dropdown-item">Booking</Link>
-                                <Link to="http://127.0.0.1:8000/admin/store" className="dropdown-item">Add Store</Link>
+                                <Link to="/add" className="dropdown-item">Add Store</Link>
                             </div>
                         </div>
 
@@ -60,8 +60,8 @@ export default function Navbar() {
                         
                     </div>
                     <div className="d-lg-flex">
-                        <Link to="/signin" className="nav-item btn btn-dark d-flex py-3 px-lg-4 p-4 m-3">Login</Link>
-                        <Link to="/signup" className="nav-item btn btn-dark d-flex py-3 px-lg-3 p-4 m-3">Register</Link>
+                        <Link to="/login" className="nav-item btn btn-dark d-flex py-3 px-lg-4 p-4 m-3">Login</Link>
+                        <Link to="/register" className="nav-item btn btn-dark d-flex py-3 px-lg-3 p-4 m-3">Register</Link>
                     </div>
                     
                 </div>

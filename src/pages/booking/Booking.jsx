@@ -1,10 +1,15 @@
 import React from 'react'
+import Navbar from '../../components/navbar/Navbar'
+import Footer from '../../components/footer/Footer'
 
 
 export default function Booking() {
     return (
         <>
-            <h2>Welcome to make </h2>        
+            <Navbar />
+            
+
+            <Footer />
         </>
     )
 }

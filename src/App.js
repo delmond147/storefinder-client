@@ -7,27 +7,26 @@ import Login from './components/auth/Login'
 import Register from './components/auth/Register';
 import Error from './pages/Error'
 import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/navbar/Navbar';
-import Footer from './components/footer/Footer';
 import { UserAuthContextProvider } from './context/UserAuthContext'
+import ProtectedRoutes from './ProtectedRoutes'
 
 
 function App() {
     
   return (
-    <div className="container-xxl bg-light p-0">
+    <div className="container-xxl bg-white p-0">
       <UserAuthContextProvider>
-        <Navbar />
         <Routes>
-          <Route path="" element={<Home />} />
+            <Route path="/" element={<Home />} exact />
+          <Route element={<ProtectedRoutes />}>
+            <Route path="/stores" element={<Stores  exact/>} />
+            <Route path="/booking" element={<Booking />} exact/>
+          </Route>
           <Route path="/about" element={<About />} />
-          <Route path="/stores" element={<Stores />} />
-          <Route path="/booking" element={<Booking />} />
-          <Route path="/signin" element={<Login />} />
-          <Route path="/signup" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
           <Route path="*" element={<Error />} />
         </Routes>
-        <Footer />
       </UserAuthContextProvider>
     </div>
   )

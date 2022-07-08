@@ -8,24 +8,24 @@ function Carousel() {
                 <div id="header-carousel" className="carousel slide" data-bs-ride="carousel">
                     <div className="carousel-inner">
                         <div className="carousel-item active" style={{maxHeight: '420px'}}>
-                            <img className="w-100" src="finder/bg-5.jpg" alt="" />
+                            <img className="w-100" src="finder/bg-2.jpg" alt="" />
                             <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                                <div className="" style={{maxWidth: '700px'}}>
+                                <div className="" >
                                     <h6 className="section-title text-white text-uppercase mb-2 animated slideInDown">Online Store Rental Platform</h6>
                                     <h1 className="text-white mb-4 animated slideInDown">Find and book a store</h1>
-                                    <a href="/signin" className="btn btn-primary py-md-4 px-md-5 me-3 animated slideInLeft">Rent Store</a>
-                                    <a href="/signin" className="btn btn-primary py-md-4 px-md-5 animated slideInRight">Buy a Store</a>
+                                    <a href="/signin" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Rent Store</a>
+                                    <a href="/signin" className="btn btn-primary py-md-3 px-md-5 animated slideInRight">Buy a Store</a>
                                 </div>
                             </div>
                         </div>
                         <div className="carousel-item" style={{maxHeight: '420px'}}>
                             <img className="w-100" src="finder/bg-5.jpg" alt="" />
                             <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                                <div className="" style={{maxWidth: '700px'}}>
+                                <div className="">
                                     <h6 className="section-title text-white text-uppercase mb-2 animated slideInDown">Online Store Rental Platform</h6>
                                     <h1 className="text-white mb-4 animated slideInDown">Online store rental made easy</h1>
-                                    <a href="/signin" className="btn btn-primary py-md-4 px-md-5 me-3 animated slideInLeft">Rent Store</a>
-                                    <a href="/signin" className="btn btn-primary py-md-4 px-md-5 animated slideInRight">Buy a Store</a>
+                                    <a href="/signin" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Rent Store</a>
+                                    <a href="/signin" className="btn btn-primary py-md-3 px-md-5 animated slideInRight">Buy a Store</a>
                                 </div>
                             </div>
                         </div>

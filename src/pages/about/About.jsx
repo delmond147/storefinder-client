@@ -1,9 +1,12 @@
 import React from 'react'
 import Carousel from '../../components/carousel/Carousel';
+import Navbar from '../../components/navbar/Navbar'
+import Footer from '../../components/footer/Footer'
 
 export default function About() {
     return (
         <>
+            <Navbar />
             <Carousel />
             {/* About Start */}
             <div className="container-xxl service py-5">
@@ -192,9 +195,8 @@ export default function About() {
                     </div>
                 </div>
             </div>
-    
-
             {/* About End */}
+            <Footer />
         
 
         </>
