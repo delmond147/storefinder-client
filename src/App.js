@@ -17,13 +17,13 @@ function App() {
     <div className="container-xxl bg-white p-0">
       <UserAuthContextProvider>
         <Routes>
-            <Route path="/" element={<Home />} exact />
           <Route element={<ProtectedRoutes />}>
+            <Route path="/home" element={<Home />} exact />
             <Route path="/stores" element={<Stores  exact/>} />
             <Route path="/booking" element={<Booking />} exact/>
           </Route>
           <Route path="/about" element={<About />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="*" element={<Error />} />
         </Routes>

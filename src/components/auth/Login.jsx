@@ -1,43 +1,41 @@
-import React, { useState } from "react";
-import { Form, Alert } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
-import { useUserAuth } from "../../context/UserAuthContext";
-import GoogleButton from "react-google-button";
-import AuthNavbar from "./AuthNavbar";
+import React, { useState } from "react"
+import { Form, Alert } from "react-bootstrap"
+import { Link, useNavigate } from "react-router-dom"
+import { useUserAuth } from "../../context/UserAuthContext"
+import GoogleButton from "react-google-button"
 
 function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  const { signIn, googleSignIn } = useUserAuth();
-  const navigate = useNavigate();
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [error, setError] = useState("")
+  const { signIn, googleSignIn } = useUserAuth()
+  const navigate = useNavigate()
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError("");
+    e.preventDefault()
+    setError("")
     try {
-      await signIn(email, password);
-      navigate("/");
+      await signIn(email, password)
+      navigate("/home")
     } catch (err) {
-      setError(err.message);
+      setError(err.message)
     }
-  };
+  }
 
   const handleGoogleSignIn = async (e) => {
-    e.preventDefault();
-    setError("");
+    e.preventDefault()
+    setError("")
     try {
-      await googleSignIn();
-      navigate("/");
+      await googleSignIn()
+      navigate("/home")
     } catch (err) {
       setError(err.message);
     }
-  };
+  }
 
   return (
     <>
-      <AuthNavbar />
-      <div className="container col-lg-4 col-md-6 col-sm-7 pt-2 card">
+      <div className="container bg-light col-lg-4 col-md-6 col-sm-7 pt-2 card">
         <div className="d-flex justify-content-center align-items-center mb-3">
           <img src="images/avatar-150.png" className="rounded-circle" alt="" />
         </div>
@@ -81,7 +79,7 @@ function Login() {
         </div>
 
         <div className="mt-3 p-4 box text-center">
-          Don't have and account yet? <Link to="signup">Register</Link>
+          Don't have and account yet? <Link to="/register">Register</Link>
         </div>
       </div>
     </>
