@@ -1,15 +1,16 @@
 /********** Template CSS **********/
 :root {
     --primary: #F6BD10;
+    --gocolor: #4285F4;
     --secondary: #FF6922;
     --light: #EFFDF5;
     --dark: #0E2E50;
     --danger: #dc3545;
     --success: #198754;
     --warning: #ffc107;
-    --infor: #0dcaf0;
+    --info: #0dcaf0;
     --orange: #fd7e14;
-    --bprimary: #0d6efd;
+    --btnprimary: #0d6efd;
     --bgcolor: #00B98E;
     --bgp: #F6BD10;
 }
@@ -37,15 +38,14 @@
     opacity: 1;
 }
 
-.hov:hover{
-    color: var(--secondary);
-}
 /*** Button ***/
 .btn {
     transition: .5s;
+    border: transparent;
+    background-color: var(--gocolor) !important;
 }
 .btn:hover{
-    background-color: var(--secondary);
+    background-color: rgb(47, 98, 218) !important;
 }
 
 .btn.btn-primary,
@@ -258,12 +258,12 @@
 /*** Category ***/
 .cat-item div {
     background: #FFFFFF;
-    border: 1px dashed rgba(34, 194, 34, 0.3);
+    border: transparent;
     transition: .5s;
 }
 
 .cat-item:hover div {
-    background: var(--primary);
+    background: var(--btnprimary);
     border-color: transparent;
 }
 
@@ -302,44 +302,6 @@
 .property-item:hover img {
     transform: scale(1.1);
 }
-
-
-
-/*** Team ***/
-
-.team-item img {
-    width: 450px;
-    height: 250px;
-}
-.team-item {
-    box-shadow: 0 0 30px rgba(0, 0, 0, .08);
-    transition: .5s;
-    height: 450px;
-}
-
-.team-item .btn {
-    color: var(--primary);
-    background: #FFFFFF;
-    box-shadow: 0 0 30px rgba(0, 0, 0, .15);
-}
-
-.team-item .btn:hover {
-    color: #FFFFFF;
-    background: var(--primary);
-}
-
-.team-item:hover {
-    border-color: var(--secondary) !important;
-}
-
-.team-item:hover .bg-primary {
-    background: var(--secondary) !important;
-}
-
-.team-item:hover .bg-primary i {
-    color: var(--secondary) !important;
-}
-
 
 
 /*** Testimonial ***/
@@ -507,7 +469,7 @@
     align-items: center;
     font-size: 16px;
     color: #FFFFFF;
-    background: var(--primary);
+    background: var(--dark);
     border-radius: 0 35px 35px 0;
     transition: .5s;
     z-index: 2;
@@ -518,7 +480,7 @@
 }
 
 .team-item div.btn-slide span a:hover i {
-    background: var(--secondary);
+    background: var(--btnprimary);
 }
 
 .service-item a.btn-slide span,
@@ -577,6 +539,9 @@ a {
     transition: .3s all ease;
 }
 
+Link{ 
+    text-decoration: none !important;
+}
 a:hover {
     text-decoration: none !important;
 }

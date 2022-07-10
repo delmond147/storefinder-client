@@ -16,7 +16,7 @@ function Login() {
     setError("")
     try {
       await signIn(email, password)
-      navigate("/home")
+      navigate("/")
     } catch (err) {
       setError(err.message)
     }
@@ -27,7 +27,7 @@ function Login() {
     setError("")
     try {
       await googleSignIn()
-      navigate("/home")
+      navigate("/")
     } catch (err) {
       setError(err.message);
     }
@@ -35,11 +35,11 @@ function Login() {
 
   return (
     <>
-      <div className="container bg-light col-lg-4 col-md-6 col-sm-7 pt-2 card">
+      <div className="container bg-dark col-lg-4 col-md-6 col-sm-7 pt-2 mt-2 card">
         <div className="d-flex justify-content-center align-items-center mb-3">
           <img src="images/avatar-150.png" className="rounded-circle" alt="" />
         </div>
-        <h3 className="mb-4 text-center">Login to Finder✌️</h3>
+        <h3 className="mb-4 text-white text-center">Login to Finder✌️</h3>
         {error && <Alert variant="danger">{error}</Alert>}
 
         <Form onSubmit={handleSubmit}>
@@ -79,7 +79,7 @@ function Login() {
         </div>
 
         <div className="mt-3 p-4 box text-center">
-          Don't have and account yet? <Link to="/register">Register</Link>
+          Don't have and account yet? <Link to="/signup">Register</Link>
         </div>
       </div>
     </>

@@ -60,8 +60,8 @@ export default function Navbar() {
                         
                     </div>
                     <div className="d-lg-flex">
-                        <Link to="/login" className="nav-item btn btn-dark d-flex py-3 px-lg-4 p-4 m-3">Login</Link>
-                        <Link to="/register" className="nav-item btn btn-dark d-flex py-3 px-lg-3 p-4 m-3">Register</Link>
+                        <Link to="/signin" className="nav-item btn btn-dark d-flex py-3 px-lg-4 p-4 m-3">Login</Link>
+                        <Link to="/signup" className="nav-item btn btn-dark d-flex py-3 px-lg-3 p-4 m-3">Register</Link>
                     </div>
                     
                 </div>

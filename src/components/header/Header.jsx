@@ -4,11 +4,6 @@ import React from 'react'
 
 
 export default function Header() {
-
-    const handleSubmit = async (e) => {
-        e.preventDefault()
-        console.log('pull data from firebase database')
-    }
     return (
         <>
             {/* <!-- Search Start --> */}
@@ -16,19 +11,19 @@ export default function Header() {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12 col-12">
-                            <form onSubmit={handleSubmit}>
+                            <form>
                                 <div className="row g-2 ">
                                     <div className="col-md-3">
-                                        <input type="text" className="form-control border-0 py-3 text-center" placeholder="Search Keyword [rent or buy]" />
+                                        <input type="text" className="form-control border-0 py-3 text-center" placeholder="rent or buy" />
                                     </div>
                                     <div className="col-md-4">
-                                        <input className="form-control border-0 py-3 text-center" placeholder="Category [store, office, supermarket]" />
+                                        <input className="form-control border-0 py-3 text-center" placeholder="store, office, supermarket, etc" />
                                     </div>
                                     <div className="col-md-3">
-                                        <input className="form-control border-0 py-3 text-center" placeholder="Location [city]" />
+                                        <input className="form-control border-0 py-3 text-center" placeholder="city" />
                                     </div>
                                     <div className="col-2">
-                                        <input type="submit" className="btn btn-dark px-5 py-3" value="find" />
+                                        <input type="submit" className="btn btn-dark px-5 py-3" value="search" />
                                     </div>
                                 </div>
                             </form>

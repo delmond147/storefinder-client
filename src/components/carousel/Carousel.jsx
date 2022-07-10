@@ -8,7 +8,7 @@ function Carousel() {
                 <div id="header-carousel" className="carousel slide" data-bs-ride="carousel">
                     <div className="carousel-inner">
                         <div className="carousel-item active" style={{maxHeight: '420px'}}>
-                            <img className="w-100" src="finder/bg-2.jpg" alt="" />
+                            <img className="w-100" src="finder/bg-4.jpg" alt="" />
                             <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
                                 <div className="" >
                                     <h6 className="section-title text-white text-uppercase mb-2 animated slideInDown">Online Store Rental Platform</h6>
@@ -19,7 +19,7 @@ function Carousel() {
                             </div>
                         </div>
                         <div className="carousel-item" style={{maxHeight: '420px'}}>
-                            <img className="w-100" src="finder/bg-5.jpg" alt="" />
+                            <img className="w-100" src="finder/bg-4.jpg" alt="" />
                             <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
                                 <div className="">
                                     <h6 className="section-title text-white text-uppercase mb-2 animated slideInDown">Online Store Rental Platform</h6>
