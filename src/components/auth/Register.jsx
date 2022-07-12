@@ -24,10 +24,10 @@ const Register = () => {
     return (
         <>
             <div className="container bg-dark col-lg-4 col-md-6 col-sm-7 pt-3 card mt-5">
-                <div className="d-flex justify-content-center align-items-center mb-4">
+                {/* <div className="d-flex justify-content-center align-items-center mb-4">
                     <img src="images/avatar-150.png" className="rounded-circle" alt="" />
-                </div>
-                <h3 className="mb-5 text-white text-center">Register on Finder✌️</h3>
+                </div> */}
+                <h3 className="mb-5 text-white text-center mt-5">Register on Finder✌️</h3>
                 {error && <Alert variant="danger">{error}</Alert>}
                 <Form onSubmit={handleSubmit}>
                 <div class="form-floating mb-4">
@@ -51,7 +51,7 @@ const Register = () => {
                     <label for="floatingPassword">Password</label>
                 </div>
 
-                <div class="col-12 mt-4 d-flex justify-content-center align-items-center">
+                <div className="col-12 mt-5 d-flex justify-content-center align-items-center">
                     <button type="submit" class="btn btn-primary px-5 py-3 ">
                         Register
                     </button>

@@ -1,23 +1,24 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
+import { initializeApp } from "firebase/app"
 import { getAuth } from 'firebase/auth'
-import { getDatabase } from 'firebase/database'
+import { getFirestore } from 'firebase/firestore'
+// import { serverTimestamp } from "firebase/database"
+
 
 const firebaseConfig = {
-  apiKey: "AIzaSyANFeok45D5NBSpw7eK2AddUbrPYHoc_P4",
-  authDomain: "react-authentication-d8bf6.firebaseapp.com",
-  projectId: "react-authentication-d8bf6",
-  storageBucket: "react-authentication-d8bf6.appspot.com",
-  messagingSenderId: "71724455169",
-  appId: "1:71724455169:web:44f4912722022b9d6ff700",
-  measurementId: "G-XK5VT7X4ZV",
-  databaseURL: "https://react-authentication-d8bf6-default-rtdb.firebaseio.com/"
+  apiKey: "AIzaSyCuf798sCHt2F9WfPqLCQjgTjP_X4tBqmg",
+  authDomain: "finder-ca7de.firebaseapp.com",
+  projectId: "finder-ca7de",
+  storageBucket: "finder-ca7de.appspot.com",
+  messagingSenderId: "587963349311",
+  appId: "1:587963349311:web:ab5dad30cc55ae8c7afb8a",
+  measurementId: "G-3RTQSG9GS5"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app)
-export const db = getDatabase(app)
+export const db = getFirestore(app)
 export default app
 
 
