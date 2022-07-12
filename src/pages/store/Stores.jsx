@@ -40,17 +40,17 @@ export default function Stores() {
                                     <div className="property-item rounded overflow-hidden">
                                         <div className="position-relative overflow-hidden">
                                             <img className="img-fluid" src="store/store1.jpg" alt="" />
-                                            <div className="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
-                                            <div className="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Office</div>
+                                            <div className="bg-dark rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                            <div className="bg-white rounded-top text-dark position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Office</div>
                                         </div>
                                         <div className="p-4 pb-0">
-                                            <h5 className="text-primary mb-3">350000FCFA</h5>
+                                            <h5 className="text-dark mb-3">350000FCFA</h5>
                                             <a className="d-block h5 mb-2" href="/booking">Office For Rent</a>
-                                            <p><i className="fa fa-map-marker-alt text-primary me-2"></i>374 Street, Bonaberi, Douala</p>
+                                            <p><i className="fa fa-map-marker-alt text-dark me-2"></i>374 Street, Bonaberi, Douala</p>
                                         </div>
                                         <div className="d-flex border-top">
-                                            <small className="flex-fill text-center border-end py-2"><i className="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                            <small className="flex-fill text-center border-end py-2"><i className="fa fa-bed text-primary me-2"></i>5 rooms</small>
+                                            <small className="flex-fill text-center border-end py-2"><i className="fa fa-ruler-combined text-dark me-2"></i>1000 Sqft</small>
+                                            <small className="flex-fill text-center border-end py-2"><i className="fa fa-bed text-dark me-2"></i>5 rooms</small>
                                             <a href="/booking" className="btn btn-dark py-3 px-5">Rent</a>  
                                         </div>
                                     </div>
@@ -59,17 +59,17 @@ export default function Stores() {
                                     <div className="property-item rounded overflow-hidden">
                                         <div className="position-relative overflow-hidden">
                                             <img className="img-fluid" src="store/store2.jpg" alt="" />
-                                            <div className="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
-                                            <div className="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Pharmacy</div>
+                                            <div className="bg-dark rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                            <div className="bg-white rounded-top text-dark position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Pharmacy</div>
                                         </div>
                                         <div className="p-4 pb-0">
-                                            <h5 className="text-primary mb-3">150000FCFA</h5>
+                                            <h5 className="text-dark mb-3">150000FCFA</h5>
                                             <a className="d-block h5 mb-2" href="/booking">Pharmacy for Rent</a>
-                                            <p><i className="fa fa-map-marker-alt text-primary me-2"></i>827 Street, Akwa, Douala</p>
+                                            <p><i className="fa fa-map-marker-alt text-dark me-2"></i>827 Street, Akwa, Douala</p>
                                         </div>
                                         <div className="d-flex border-top">
-                                            <small className="flex-fill text-center border-end py-2"><i className="fa fa-ruler-combined text-primary me-2"></i>800 Sqft</small>
-                                            <small className="flex-fill text-center border-end py-2"><i className="fa fa-bed text-primary me-2"></i>3 rooms</small>
+                                            <small className="flex-fill text-center border-end py-2"><i className="fa fa-ruler-combined text-dark me-2"></i>800 Sqft</small>
+                                            <small className="flex-fill text-center border-end py-2"><i className="fa fa-bed text-dark me-2"></i>3 rooms</small>
                                             <a href="/booking" className="btn btn-dark py-3 px-5">Rent</a>  
                                         </div>
                                     </div>
@@ -78,17 +78,17 @@ export default function Stores() {
                                     <div className="property-item rounded overflow-hidden">
                                         <div className="position-relative overflow-hidden">
                                             <img className="img-fluid" src="store/store3.jpg" alt="" />
-                                            <div className="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
-                                            <div className="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Super Market</div>
+                                            <div className="bg-dark rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
+                                            <div className="bg-white rounded-top text-dark position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Super Market</div>
                                         </div>
                                         <div className="p-4 pb-0">
-                                            <h5 className="text-primary mb-3">5000000FCFA</h5>
+                                            <h5 className="text-dark mb-3">5000000FCFA</h5>
                                             <a className="d-block h5 mb-2" href="/booking">Super Market For Sell</a>
-                                            <p><i className="fa fa-map-marker-alt text-primary me-2"></i>615 Street, Bonanjo, Douala</p>
+                                            <p><i className="fa fa-map-marker-alt text-dark me-2"></i>615 Street, Bonanjo, Douala</p>
                                         </div>
                                         <div className="d-flex border-top">
-                                            <small className="flex-fill text-center border-end py-2"><i className="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                            <small className="flex-fill text-center border-end py-2"><i className="fa fa-bed text-primary me-2"></i>4 sections</small>
+                                            <small className="flex-fill text-center border-end py-2"><i className="fa fa-ruler-combined text-dark me-2"></i>1000 Sqft</small>
+                                            <small className="flex-fill text-center border-end py-2"><i className="fa fa-bed text-dark me-2"></i>4 sections</small>
                                             <a href="/booking" className="btn btn-dark py-3 px-5">Buy</a>  
                                         </div>
                                     </div>
@@ -101,17 +101,17 @@ export default function Stores() {
                                     <div className="property-item rounded overflow-hidden">
                                         <div className="position-relative overflow-hidden">
                                             <img className="img-fluid" src="store/store4.jpg" alt="" />
-                                            <div className="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
-                                            <div className="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Patrol Station</div>
+                                            <div className="bg-dark rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
+                                            <div className="bg-white rounded-top text-dark position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Patrol Station</div>
                                         </div>
                                         <div className="p-4 pb-0">
-                                            <h5 className="text-primary mb-3">3500000FACA</h5>
+                                            <h5 className="text-dark mb-3">3500000FACA</h5>
                                             <a className="d-block h5 mb-2" href="/booking">BOCOM Patrol Station For Sell</a>
-                                            <p><i className="fa fa-map-marker-alt text-primary me-2"></i>330 Street, Bonassama, Douala</p>
+                                            <p><i className="fa fa-map-marker-alt text-dark me-2"></i>330 Street, Bonassama, Douala</p>
                                         </div>
                                         <div className="d-flex border-top">
-                                            <small className="flex-fill text-center border-end py-2"><i className="fa fa-ruler-combined text-primary me-2"></i>2000 Sqft</small>
-                                            <small className="flex-fill text-center border-end py-2"><i className="fa fa-bed text-primary me-2"></i>3 sections</small>
+                                            <small className="flex-fill text-center border-end py-2"><i className="fa fa-ruler-combined text-dark me-2"></i>2000 Sqft</small>
+                                            <small className="flex-fill text-center border-end py-2"><i className="fa fa-bed text-dark me-2"></i>3 sections</small>
                                             <a href="/booking" className="btn btn-dark py-3 px-5">Buy</a>  
                                         </div>
                                     </div>
@@ -120,17 +120,17 @@ export default function Stores() {
                                     <div className="property-item rounded overflow-hidden">
                                         <div className="position-relative overflow-hidden">
                                             <img className="img-fluid" src="store/store5.jpg" alt="" />
-                                            <div className="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
-                                            <div className="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Grocery Store</div>
+                                            <div className="bg-dark rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                            <div className="bg-white rounded-top text-dark position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Grocery Store</div>
                                         </div>
                                         <div className="p-4 pb-0">
-                                            <h5 className="text-primary mb-3">120000FCFA</h5>
+                                            <h5 className="text-dark mb-3">120000FCFA</h5>
                                             <a className="d-block h5 mb-2" href="/booking">Grocery Store For Rent</a>
-                                            <p><i className="fa fa-map-marker-alt text-primary me-2"></i>719 Street, Commercial Avenuue, Bamenda</p>
+                                            <p><i className="fa fa-map-marker-alt text-dark me-2"></i>719 Street, Commercial Avenuue, Bamenda</p>
                                         </div>
                                         <div className="d-flex border-top">
-                                            <small className="flex-fill text-center border-end py-2"><i className="fa fa-ruler-combined text-primary me-2"></i>300 Sqft</small>
-                                            <small className="flex-fill text-center border-end py-2"><i className="fa fa-bed text-primary me-2"></i>no rooms</small>
+                                            <small className="flex-fill text-center border-end py-2"><i className="fa fa-ruler-combined text-dark me-2"></i>300 Sqft</small>
+                                            <small className="flex-fill text-center border-end py-2"><i className="fa fa-bed text-dark me-2"></i>no rooms</small>
                                             <a href="/booking" className="btn btn-dark py-3 px-5">Rent</a>  
                                         </div>
                                     </div>
@@ -139,17 +139,17 @@ export default function Stores() {
                                     <div className="property-item rounded overflow-hidden">
                                         <div className="position-relative overflow-hidden">
                                             <img className="img-fluid" src="store/store6.jpg" alt="" />
-                                            <div className="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
-                                            <div className="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Barbing Salone</div>
+                                            <div className="bg-dark rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                            <div className="bg-white rounded-top text-dark position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Barbing Salone</div>
                                         </div>
                                         <div className="p-4 pb-0">
-                                            <h5 className="text-primary mb-3">100000FCFA</h5>
+                                            <h5 className="text-dark mb-3">100000FCFA</h5>
                                             <a className="d-block h5 mb-2" href="/booking">Barbing Salone For Rent</a>
-                                            <p><i className="fa fa-map-marker-alt text-primary me-2"></i>496 Street, Bastos, Yaounde</p>
+                                            <p><i className="fa fa-map-marker-alt text-dark me-2"></i>496 Street, Bastos, Yaounde</p>
                                         </div>
                                         <div className="d-flex border-top">
-                                            <small className="flex-fill text-center border-end py-2"><i className="fa fa-ruler-combined text-primary me-2"></i>1000 Sqft</small>
-                                            <small className="flex-fill text-center border-end py-2"><i className="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                            <small className="flex-fill text-center border-end py-2"><i className="fa fa-ruler-combined text-dark me-2"></i>1000 Sqft</small>
+                                            <small className="flex-fill text-center border-end py-2"><i className="fa fa-bed text-dark me-2"></i>3 Bed</small>
                                             <a href="/booking" className="btn btn-dark py-3 px-5">Rent</a>  
                                         </div>
                                     </div>

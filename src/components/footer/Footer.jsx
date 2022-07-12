@@ -67,12 +67,12 @@ export default function Footer() {
                     <div className="row">
                         <div className="text-md-center mb-0">
                             <div className="text-center">
-                                &copy; Copyright  <a className="text-secondary" href="/">Finder</a> All Right Reserved.
+                                &copy; Copyright  <a className="text-primary" href="/">Finder</a> All Right Reserved.
                             </div> 
 							
 							{/* This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. */}
 							<div className="text-center">
-                                Designed By <a className="text-secondary" href="/dgitech">Dgitech</a>
+                                Designed By <a className="text-primary" href="/dgitech">Dgitech</a>
                             </div>
                         </div>
                     </div>

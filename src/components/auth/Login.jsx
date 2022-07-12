@@ -16,7 +16,7 @@ function Login() {
     setError("")
     try {
       await signIn(email, password)
-      navigate("/home")
+      navigate("/")
     } catch (err) {
       setError(err.message)
     }
@@ -27,7 +27,7 @@ function Login() {
     setError("")
     try {
       await googleSignIn()
-      navigate("/home")
+      navigate("/")
     } catch (err) {
       setError(err.message);
     }
@@ -35,15 +35,15 @@ function Login() {
 
   return (
     <>
-      <div className="container bg-light col-lg-4 col-md-6 col-sm-7 pt-2 card">
-        <div className="d-flex justify-content-center align-items-center mb-3">
+      <div className="container bg-dark col-lg-4 col-md-6 col-sm-7 pt-2 mt-5 card">
+        {/* <div className="d-flex justify-content-center align-items-center mb-3">
           <img src="images/avatar-150.png" className="rounded-circle" alt="" />
-        </div>
-        <h3 className="mb-4 text-center">Login to Finder✌️</h3>
+        </div> */}
+        <h3 className="mb-5 text-white text-center mt-5">Login to Finder✌️</h3>
         {error && <Alert variant="danger">{error}</Alert>}
 
         <Form onSubmit={handleSubmit}>
-          <div class="form-floating mb-4">
+          <div className="form-floating mb-4">
             <input
               type="email"
               class="form-control"
@@ -53,7 +53,7 @@ function Login() {
             />
             <label for="floatingInput">Email address</label>
           </div>
-          <div class="form-floating">
+          <div className="form-floating">
             <input
               type="password"
               class="form-control"
@@ -64,11 +64,10 @@ function Login() {
             <label for="floatingPassword">Password</label>
           </div>
 
-          <div class="col-12 mt-4 d-flex justify-content-between align-items-center">
+          <div className="col-12 mt-4 d-flex justify-content-center align-items-center">
             <button type="submit" class="btn btn-primary px-5 py-3 ">
               Login
             </button>
-            <Link className="text-blue" to="/reset">Forgotten Password</Link>
           </div>
         </Form>
 
@@ -79,7 +78,7 @@ function Login() {
         </div>
 
         <div className="mt-3 p-4 box text-center">
-          Don't have and account yet? <Link to="/register">Register</Link>
+          Don't have and account yet? <Link to="/signup">Register</Link>
         </div>
       </div>
     </>
