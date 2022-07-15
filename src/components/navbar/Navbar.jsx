@@ -20,13 +20,13 @@ export default function Navbar() {
                     <div className="col-lg-5 px-5 text-end">
                         <div className="h-100 d-inline-flex align-items-center py-3 me-4">
                             <small className="fa fa-phone-alt text-secondary me-2"></small>
-                            <small className="text-light">+237680749528</small>
+                            <a href="Tel:+237680749528" className="text-light">+237680749528</a>
                         </div>
                         <div className="h-100 d-inline-flex align-items-center">
-                            <a className="btn btn-sm-square bg-white text-secondary me-1" href="#home"><i className="fab fa-facebook-f"></i></a>
-                            <a className="btn btn-sm-square bg-white text-secondary me-1" href="#home"><i className="fab fa-twitter"></i></a>
-                            <a className="btn btn-sm-square bg-white text-secondary me-1" href="#home"><i className="fab fa-linkedin-in"></i></a>
-                            <a className="btn btn-sm-square bg-white text-secondary me-0" href="#home"><i className="fab fa-instagram"></i></a>
+                            <a className="btn btn-sm-square bg-white text-white me-1" href="#home"><i className="fab fa-facebook-f"></i></a>
+                            <a className="btn btn-sm-square bg-white text-white me-1" href="#home"><i className="fab fa-twitter"></i></a>
+                            <a className="btn btn-sm-square bg-white text-white me-1" href="#home"><i className="fab fa-linkedin-in"></i></a>
+                            <a className="btn btn-sm-square bg-white text-white me-0" href="#home"><i className="fab fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
@@ -36,8 +36,8 @@ export default function Navbar() {
 
             {/* <!-- Navbar Start --> */}
             <nav className="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-                <Link to="/" className="navbar-brand d-flex align-items-center px-4 px-lg-5 hov">
-                    <h2 className="m-0 text-dark hov"><i className="fa fa-home me-1"></i>FINDER</h2>
+                <Link to="/" className="navbar-brand d-flex align-items-center px-4 ">
+                    <h2 className="m-0 text-dark"><i className="fa fa-home me-1"></i>FINDER</h2>
                 </Link>
                 <button type="button" className="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span className="navbar-toggler-icon"></span>

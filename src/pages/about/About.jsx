@@ -1,5 +1,4 @@
 import React from 'react'
-import Carousel from '../../components/carousel/Carousel';
 import Navbar from '../../components/navbar/Navbar'
 import Footer from '../../components/footer/Footer'
 
@@ -7,15 +6,13 @@ export default function About() {
     return (
         <>
             <Navbar />
-            <Carousel />
-            {/* About Start */}
             <div className="container-xxl service py-5">
                 <div className="container">
                     <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-                        <h1 className="mb-5">Explore more about Us</h1>
+                        <h1 className="mb-5">About Us</h1>
                     </div>
                     <div className="row g-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div className="col-lg-4">
+                        <div className="col-lg-3">
                             <div className="nav w-100 nav-pills me-4">
                                 <button className="nav-link w-100 d-flex align-items-center text-start p-4 mb-4 active" data-bs-toggle="pill" data-bs-target="#tab-pane-1" type="button">
                                     <i className="fa fa-car-side fa-2x me-3"></i>
@@ -101,86 +98,60 @@ export default function About() {
                                 {/* about our team */}
                                 <div className="tab-pane fade" id="tab-pane-4">
                                     <div className="row g-4">
-                                        <div className="col-md-6" style={{minHeight: '350px'}}>
-                                            <div className="position-relative h-100">
-                                                <img className="position-absolute img-fluid w-100 h-100" src="finder/bg-3.jpeg"
-                                                    style={{objectFit: 'cover'}} alt="" />
-                                            </div>
-                                        </div>
-                                        <div className="col-md-6">
-                                            <div className="container">
-                                                <div className="text-center wow fadeInUp mb-5" data-wow-delay="0.1s">
-                                                    <h1 className="mb-3">Our Team</h1>
-                                                    <p>Meet our partners and team members with the most prominent stores for you</p>
+                                        <div className="col-md-12">
+                                            <div class="container">
+                                                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                                                    <h1 class="mb-5">Our Expert Team Members</h1>
                                                 </div>
-                                                <div className="row g-4">
-                                                    <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                                                        <div className="team-item p-4">
-                                                            <div className="overflow-hidden mb-4">
-                                                                <img className="img-fluid" src="img/team-6.jpg" alt="" />
+                                                <div class="row g-4">
+                                                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                                                        <div class="team-item p-4">
+                                                            <div class="overflow-hidden mb-4">
+                                                                <img class="img-fluid" src="img/team-5.png" alt="" />
                                                             </div>
-                                                            <h5 className="mb-0">Tufoin Carissa</h5>
-                                                            <p>CFO at "FINDER"</p>
-                                                            <div className="btn-slide mt-1">
-                                                                <i className="fa fa-share"></i>
+                                                            <h5 class="mb-0">Delmond Bongha</h5>
+                                                            <p>CEO & Founder</p>
+                                                            <div class="btn-slide mt-1">
+                                                                <i class="fa fa-share"></i>
                                                                 <span>
-                                                                    <a href="/team"><i className="fab fa-facebook-f"></i></a>
-                                                                    <a href="/team"><i className="fab fa-twitter"></i></a>
-                                                                    <a href="/team"><i className="fab fa-instagram"></i></a>
+                                                                    <a href="/team"><i class="fab fa-facebook-f"></i></a>
+                                                                    <a href="/team"><i class="fab fa-twitter"></i></a>
+                                                                    <a href="/team"><i class="fab fa-instagram"></i></a>
                                                                 </span>
                                                             </div>
                                                         </div>
                                                     </div>
-
-                                                    <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                                                        <div className="team-item p-4">
-                                                            <div className="overflow-hidden mb-4">
-                                                                <img className="img-fluid" src="img/team-5.png" alt="" />
+                                                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                                                        <div class="team-item p-4">
+                                                            <div class="overflow-hidden mb-4">
+                                                                <img class="img-fluid" src="img/team-6.jpg" alt="" />
                                                             </div>
-                                                            <h5 className="mb-0">Delmond Bongha</h5>
-                                                            <p>CEO & Founder at "FINDER"</p>
-                                                            <div className="btn-slide mt-1" >
-                                                                <i className="fa fa-share"></i>
+                                                            <h5 class="mb-0">Tufoin Carissa</h5>
+                                                            <p>CFO</p>
+                                                            <div class="btn-slide mt-1">
+                                                                <i class="fa fa-share"></i>
                                                                 <span>
-                                                                    <a href="/team"><i className="fab fa-facebook-f"></i></a>
-                                                                    <a href="/team"><i className="fab fa-twitter"></i></a>
-                                                                    <a href="/team"><i className="fab fa-instagram"></i></a>
+                                                                    <a href="/team"><i class="fab fa-facebook-f"></i></a>
+                                                                    <a href="/team"><i class="fab fa-twitter"></i></a>
+                                                                    <a href="/team"><i class="fab fa-instagram"></i></a>
                                                                 </span>
                                                             </div>
                                                         </div>
                                                     </div>
-
-                                                    <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                                                        <div className="team-item p-4">
-                                                            <div className="overflow-hidden mb-4">
-                                                                <img className="img-fluid" src="img/team-3.jpg" alt="" />
+                                                    
+                                                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.9s">
+                                                        <div class="team-item p-4">
+                                                            <div class="overflow-hidden mb-4">
+                                                                <img class="img-fluid" src="img/team-4.jpg" alt="" />
                                                             </div>
-                                                            <h5 className="mb-0">Nfor Nadia</h5>
-                                                            <p>Sales Manager</p>
-                                                            <div className="btn-slide mt-1" >
-                                                                <i className="fa fa-share"></i>
+                                                            <h5 class="mb-0">Fonki Britney</h5>
+                                                            <p>COO</p>
+                                                            <div class="btn-slide mt-1">
+                                                                <i class="fa fa-share"></i>
                                                                 <span>
-                                                                    <a href="/team"><i className="fab fa-facebook-f"></i></a>
-                                                                    <a href="/team"><i className="fab fa-twitter"></i></a>
-                                                                    <a href="/team"><i className="fab fa-instagram"></i></a>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                                                        <div className="team-item p-4">
-                                                            <div className="overflow-hidden mb-4">
-                                                                <img className="img-fluid" src="img/team-4.jpg" alt="" />
-                                                            </div>
-                                                            <h5 className="mb-0">Fonki Britney</h5>
-                                                            <p>COO at "FINDER"</p>
-                                                            <div className="btn-slide mt-1" >
-                                                                <i className="fa fa-share"></i>
-                                                                <span>
-                                                                    <a href="/team"><i className="fab fa-facebook-f"></i></a>
-                                                                    <a href="/team"><i className="fab fa-twitter"></i></a>
-                                                                    <a href="/team"><i className="fab fa-instagram"></i></a>
+                                                                    <a href="/team"><i class="fab fa-facebook-f"></i></a>
+                                                                    <a href="/team"><i class="fab fa-twitter"></i></a>
+                                                                    <a href="/team"><i class="fab fa-instagram"></i></a>
                                                                 </span>
                                                             </div>
                                                         </div>
@@ -195,7 +166,6 @@ export default function About() {
                     </div>
                 </div>
             </div>
-            {/* About End */}
             <Footer />
         
 

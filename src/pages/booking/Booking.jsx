@@ -8,6 +8,7 @@ export default function Booking() {
         <>
             <Navbar />
             
+                <h2 className="pt-4 mb-4 text-center">No recent activities here!</h2>
 
             <Footer />
         </>
