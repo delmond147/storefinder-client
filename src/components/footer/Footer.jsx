@@ -12,8 +12,8 @@ export default function Footer() {
                     <div className="col-lg-3 col-md-6">
                         <h5 className="text-white mb-4">Get In Touch</h5>
                         <p className="mb-2 text-white"><i className="fa fa-map-marker-alt me-3"></i>348 Bonaberi, Douala, Cameroon</p>
-                        <p className="mb-2 text-white"><i className="fa fa-phone-alt me-3"></i>+237680749528</p>
-                        <p className="mb-2 text-white"><i className="fa fa-envelope me-3"></i>dyingchuo@gmail.com</p>
+                        <a href="Tel:+237680749528" className="mb-2 text-white"><i className="fa fa-phone-alt me-3"></i>+237680749528</a>
+                        <a href="mailto:dnyingchuo@gmail.com" className="mb-2 text-white"><i className="fa fa-envelope me-3"></i>dnyingchuo@gmail.com</a>
                         <div className="d-flex pt-2">
                             <a className="btn btn-secondary btn-social" href="#home"><i className="fab fa-twitter"></i></a>
                             <a className="btn btn-secondary btn-social" href="#home"><i className="fab fa-facebook-f"></i></a>

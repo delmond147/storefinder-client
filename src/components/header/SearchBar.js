@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-import {Alert} from 'react-bootstrap'
+import { Alert } from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom'
+import { getDocs } from 'firebase/firestore'
 
 export default function SearchBar() {
     const [purpose, setPurpose] = useState("")
@@ -7,10 +9,18 @@ export default function SearchBar() {
     const [location, setLocation] = useState("")
     const [error, setError] = useState("")
 
+    const navigate = useNavigate()
 
-    const handleSubmit = (e) => {
+
+    const handleSubmit = async (e) => {
         e.preventDefault()
         setError("")
+        try {
+            await getDocs()
+            navigate('/results')
+        } catch (err) {
+            setError(err.message)
+        }
 
     }
     return (
@@ -19,21 +29,21 @@ export default function SearchBar() {
             <div className="container-fluid bg-dark mb-3 wow fadeIn" data-wow-delay="0.1s" style={{ padding: '35px' }}>
                 <div className="container">
                     <div className="row">
-                        <h3 className="mb-3 text-center">{error && <Alert variant="danger">{ error}</Alert>}</h3>
+                        <p className="mb-3 text-center">{error && <Alert variant="danger" dismissible onClose={() => setError("")}>{ error}</Alert>}</p>
                         <div className="col-md-12 col-12">
                             <form onSubmit={handleSubmit}>
                                 <div className="row g-2 ">
                                     <div className="col-md-3">
-                                        <input type="text" className="form-control border-0 py-3" placeholder="rent or buy" value={purpose} onChange={(e) => setPurpose(e.target.value)} />
+                                        <input type="text" className="form-control border-0 py-3" placeholder="Rent or Buy" value={purpose} onChange={(e) => setPurpose(e.target.value)} />
                                     </div>
                                     <div className="col-md-4">
-                                        <input className="form-control border-0 py-3" placeholder="store, office, supermarket, etc" value={category} onChange={(e) => setCategory(e.target.value)} />
+                                        <input className="form-control border-0 py-3" placeholder="Category (Office, Supermarket, Grocery) etc." value={category} onChange={(e) => setCategory(e.target.value)} />
                                     </div>
                                     <div className="col-md-3">
-                                        <input className="form-control border-0 py-3" placeholder="city" value={location} onChange={(e) => setLocation(e.target.value)} />
+                                        <input className="form-control border-0 py-3" placeholder="City" value={location} onChange={(e) => setLocation(e.target.value)} />
                                     </div>
                                     <div className="col-2">
-                                        <input type="submit" className="btn btn-dark px-5 py-3 col-lg-12 col-sm-12" value="search" />
+                                        <button type="submit" className="btn btn-dark px-5 py-3 col-lg-12 col-sm-12"><i className="fa fa-search me-3"></i>Search</button>
                                     </div>
                                 </div>
                             </form>

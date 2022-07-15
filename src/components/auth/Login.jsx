@@ -39,8 +39,13 @@ function Login() {
         {/* <div className="d-flex justify-content-center align-items-center mb-3">
           <img src="images/avatar-150.png" className="rounded-circle" alt="" />
         </div> */}
-        <h3 className="mb-5 text-white text-center mt-5">Login to Finder✌️</h3>
-        {error && <Alert variant="danger">{error}</Alert>}
+        <div className="d-flex justify-content-center align-items-center mb-4 mt-4">
+          <Link to="/" className="navbar-brand" >
+            <i className="fa fa-home me-1"></i>
+          </Link>
+          <h3 className="text-center text-light">Login to Finder✌️</h3>
+        </div>
+        {error && <Alert variant="danger" dismissible onClose={() => setError("")}>{error}</Alert>}
 
         <Form onSubmit={handleSubmit}>
           <div className="form-floating mb-4">

@@ -27,8 +27,14 @@ const Register = () => {
                 {/* <div className="d-flex justify-content-center align-items-center mb-4">
                     <img src="images/avatar-150.png" className="rounded-circle" alt="" />
                 </div> */}
-                <h3 className="mb-5 text-white text-center mt-5">Register on Finder✌️</h3>
-                {error && <Alert variant="danger">{error}</Alert>}
+                
+                <div className="d-flex justify-content-center align-items-center pt-4 mb-4 ">
+                    <Link to="/" className="navbar-brand" >
+                        <i className="fa fa-home me-1"></i>
+                    </Link>
+                    <h3 className="text-center text-light">Register on Finder✌️</h3>
+                </div>
+                {error && <Alert variant="danger" dismissible onClose={() => setError("")}>{error}</Alert>}
                 <Form onSubmit={handleSubmit}>
                 <div class="form-floating mb-4">
                     <input
