@@ -262,7 +262,7 @@
 
 /*** Category ***/
 .cat-item div {
-    background: var(--btnprimary);
+    background: var(--dark);
     border: transparent;
     transition: .5s;
 }
@@ -377,11 +377,6 @@
     padding-right: 0;
     border-right: none;
 }
-
-
-
-
-
 
 
 /* Team */

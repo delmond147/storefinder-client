@@ -1,35 +1,36 @@
 import React, { useState } from "react"
-import { Form, Alert } from "react-bootstrap"
+import {auth} from '../../firebase'
+import {toast} from 'react-toastify'
 import { Link, useNavigate } from "react-router-dom"
-import { useUserAuth } from "../../context/UserAuthContext"
+import {signInWithEmailAndPassword, GoogleAuthProvider, signInWithRedirect} from 'firebase/auth'
 import GoogleButton from "react-google-button"
 
 function Login() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
-  const [error, setError] = useState("")
-  const { signIn, googleSignIn } = useUserAuth()
+  const provider = new GoogleAuthProvider()
+
   const navigate = useNavigate()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    setError("")
+    
     try {
-      await signIn(email, password)
+      await signInWithEmailAndPassword(auth, email, password)
       navigate("/")
-    } catch (err) {
-      setError(err.message)
+    } catch (error) {
+      toast(error.code, {type: "error"})
     }
   }
 
   const handleGoogleSignIn = async (e) => {
     e.preventDefault()
-    setError("")
+    
     try {
-      await googleSignIn()
+      await signInWithRedirect(auth, provider)
       navigate("/")
-    } catch (err) {
-      setError(err.message);
+    } catch (error) {
+      toast(error.code, { type: "error"})
     }
   }
 
@@ -45,9 +46,8 @@ function Login() {
           </Link>
           <h3 className="text-center text-light">Login to Finder✌️</h3>
         </div>
-        {error && <Alert variant="danger" dismissible onClose={() => setError("")}>{error}</Alert>}
 
-        <Form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <div className="form-floating mb-4">
             <input
               type="email"
@@ -74,7 +74,7 @@ function Login() {
               Login
             </button>
           </div>
-        </Form>
+        </form>
 
         <hr />
 
