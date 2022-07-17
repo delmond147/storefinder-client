@@ -5,17 +5,17 @@ import Category from '../category/Category'
 import Team from '../team/Team'
 import Navbar from '../../components/navbar/Navbar'
 import Footer from '../../components/footer/Footer'
-import StoreListing from '../../components/StoreListing';
-import {Alert} from 'react-bootstrap'
+import Stores from '../../components/Stores';
 
-export default function Home({ docs }) {
+
+export default function Home() {
     return (
         <>
             <Navbar />
             <Carousel />
             <SearchBar />
             <Category />
-            {docs ? <StoreListing /> : <Alert variant="danger">No stores available at this moment</Alert>}
+            <Stores /> 
             <Team />
             <Footer />
         

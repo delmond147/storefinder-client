@@ -1,7 +1,7 @@
 import React from 'react'
 import { Form, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import Footer from '../../components/footer/Footer'
+// import Footer from '../../components/footer/Footer'
 // import Navbar from '../../components/navbar/Navbar'
 
 export default function Contact() {
@@ -25,7 +25,7 @@ export default function Contact() {
         </Form.Group>
 
         <Form.Group className='mb-3' controlId="FormUserName">
-          <textarea type="text" className="w-100" placeholder="Message" />
+          <textarea type="text" className="w-100" placeholder="Message" style={{height: '250px'}} />
         </Form.Group>
 
         <div className="col-12 d-flex justify-content-center align-items-center mb-4">

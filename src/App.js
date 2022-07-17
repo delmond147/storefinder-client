@@ -2,9 +2,9 @@ import React from 'react'
 import Home from './pages/home/Home'
 import About from './pages/about/About'
 import Booking from './pages/booking/Booking'
-import Stores from './pages/store/Stores'
-import Contact from './pages/contact/Contact'
 import AddStore from './components/AddStore'
+import StoreList from './pages/store/StoreList'
+import Contact from './pages/contact/Contact'
 import Login from './components/auth/Login'
 import Register from './components/auth/Register'
 import Error from './pages/Error'
@@ -21,7 +21,7 @@ function App() {
           <Route path="/" element={<Home />} exact />
           <Route path="add" element={<AddStore />} />
           {/* <Route element={<ProtectedRoutes />}></Route> */}
-          <Route path="stores" element={<Stores />} />
+          <Route path="stores" element={<StoreList />} />
           <Route path="booking" element={<Booking />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />

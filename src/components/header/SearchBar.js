@@ -26,7 +26,7 @@ export default function SearchBar() {
     return (
         <>
             {/* <!-- Search Start --> */}
-            <div className="container-fluid bg-dark mb-3 wow fadeIn" data-wow-delay="0.1s" style={{ padding: '35px' }}>
+            <div className="container-xxl bg-dark mb-3 wow fadeIn" data-wow-delay="0.1s" style={{ padding: '35px' }}>
                 <div className="container">
                     <div className="row">
                         <p className="mb-3 text-center">{error && <Alert variant="danger" dismissible onClose={() => setError("")}>{ error}</Alert>}</p>
@@ -36,14 +36,14 @@ export default function SearchBar() {
                                     <div className="col-md-3">
                                         <input type="text" className="form-control border-0 py-3" placeholder="Rent or Buy" value={purpose} onChange={(e) => setPurpose(e.target.value)} />
                                     </div>
-                                    <div className="col-md-4">
+                                    <div className="col-md-3">
                                         <input className="form-control border-0 py-3" placeholder="Category (Office, Supermarket, Grocery) etc." value={category} onChange={(e) => setCategory(e.target.value)} />
                                     </div>
                                     <div className="col-md-3">
                                         <input className="form-control border-0 py-3" placeholder="City" value={location} onChange={(e) => setLocation(e.target.value)} />
                                     </div>
-                                    <div className="col-2">
-                                        <button type="submit" className="btn btn-dark px-5 py-3 col-lg-12 col-sm-12"><i className="fa fa-search me-3"></i>Search</button>
+                                    <div className="col-3">
+                                        <button type="submit" className="btn btn-dark px-3 py-3 d-flex justify-content-center align-items-center col-lg-12"><i className="fa fa-search me-3"></i>Search</button>
                                     </div>
                                 </div>
                             </form>
