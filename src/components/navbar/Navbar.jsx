@@ -118,13 +118,13 @@ export default function Navbar() {
               <div className="d-lg-flex">
                 <Link
                   to="/signin"
-                  className="nav-item btn btn-dark d-flex py-3 px-lg-4 p-4"
+                  className="nav-item btn btn-dark d-flex py-3 px-lg-4 p-4 m-3"
                 >
                   Login
                 </Link>
                 <Link
                   to="/signup"
-                  className="nav-item btn btn-dark d-flex py-3 px-lg-3 p-4"
+                  className="nav-item btn btn-dark d-flex py-3 px-lg-3 p-4 m-3"
                 >
                   Register
                 </Link>
@@ -185,11 +185,11 @@ export default function Navbar() {
                 </Link>
               </div>
 
-              <div className="">
+              <div className="d-flex justify-content-between align-items-center">
                 <span className="pe-4">
                   Welcome, {user.displayName}
                 </span>
-                <button className=" nav-item btn btn-dark py-3 px-lg-3" onClick={() => signOut()}>Logout</button>
+                <button className=" nav-item btn btn-dark py-3 px-lg-3" onClick={() => signOut(auth)}>Logout</button>
               </div>
             </div>
           </>

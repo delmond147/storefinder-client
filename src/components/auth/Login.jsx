@@ -2,13 +2,14 @@ import React, { useState } from "react"
 import {auth} from '../../firebase'
 import {toast} from 'react-toastify'
 import { Link, useNavigate } from "react-router-dom"
-import {signInWithEmailAndPassword, GoogleAuthProvider, signInWithRedirect} from 'firebase/auth'
+import {useUserAuth} from '../../context/UserAuthContext'
+import {signInWithEmailAndPassword} from 'firebase/auth'
 import GoogleButton from "react-google-button"
 
 function Login() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
-  const provider = new GoogleAuthProvider()
+  const {googleSignIn} = useUserAuth()
 
   const navigate = useNavigate()
 
@@ -27,7 +28,7 @@ function Login() {
     e.preventDefault()
     
     try {
-      await signInWithRedirect(auth, provider)
+      await googleSignIn()
       navigate("/")
     } catch (error) {
       toast(error.code, { type: "error"})
