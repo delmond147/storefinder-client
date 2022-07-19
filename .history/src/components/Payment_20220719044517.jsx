@@ -1,12 +1,26 @@
 // import "./App.css";
-import React from 'react'
-import { useState } from "react";
+
+import {  onSnapshot, doc } from "firebase/firestore";
+import React, { useState, useEffect } from "react";
+import { auth, db } from "../firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
+import {useParams} from 'react-router-dom'
 import StripeCheckout from "react-stripe-checkout";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function Payment() {
+  const { id } = useParams();
+  const [store, setStore] = useState(null);
+  const [user] = useAuthState(auth);
+
+  useEffect(() => {
+    const docRef = doc(db, "stores", id);
+    onSnapshot(docRef, (snapshot) => {
+      setStore({ ...snapshot.data(), id: snapshot.id });
+    });
+  }, []);
 
   toast.configure()
 
@@ -34,10 +48,8 @@ function Payment() {
   return (
     <div className="App">
       <div className="container">
-        <br />
-        <br />
+        
         <h1 className="text-center">Stripe Checkout</h1>
-        <br />
         <h2 className="text-center">Product Info</h2>
         <h3 className="text-center">Product Name: {product.name}</h3>
         <h3 className="text-center">Product Price: {product.price}</h3>

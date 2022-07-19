@@ -4,12 +4,11 @@ import { auth, db } from "../firebase";
 import DeleteStore from "./DeleteStore";
 import { useAuthState } from "react-firebase-hooks/auth";
 import LikeStore from "./LikeStore";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Stores() {
     const [stores, setStores] = useState([]);
     const [user] = useAuthState(auth);
-    const navigate = useNavigate()
     useEffect(() => {
         const articleRef = collection(db, "stores");
         const q = query(articleRef, orderBy("createdAt", "desc"));
@@ -76,7 +75,7 @@ export default function Stores() {
                                                 <div className="row">
                                                     <div className="col-6">
                                                         {createdBy && (
-                                                            <span className="badge bg-primary">Store Owner: {createdBy}</span>
+                                                            <span className="badge bg-primary">{createdBy}</span>
                                                         )}
                                                     </div>
                                                     <div className="col-6 d-flex flex-row-reverse">
@@ -100,7 +99,7 @@ export default function Stores() {
                                                     <h5 className="text-dark mb-2">{amount} FCFA</h5>
                                                     <p className="h6 text-secondary">{title}</p>
                                                     <p className="text-secondary"><i className="fa fa-map-marker-alt text-dark me-2"></i>{location}</p>
-                                                    <p className="">{description}</p>
+                                                    <p className="text-danger">{description}</p>
                                                 </div>
                                                 <div className="d-flex flex-row-reverse">
                                                     {user && <LikeStore id={id} likes={likes} />}
@@ -117,8 +116,8 @@ export default function Stores() {
                                                     <small className="flex-fill text-center border-end py-2"><i className="fa fa-ruler-combined text-dark me-2"></i>{size} Sq mtrs</small>
                                                     <small className="flex-fill text-center border-end py-2"><i className="text-dark me-2"></i>{createdAt.toDate().toDateString()}</small>
 
-                                                    <a href="/payment" className="btn btn-dark py-2 px-4" onClick={() => user ? navigate("/payment"): navigate("/signin")}>
-                                                        Rent
+                                                    <a href="/payment" className="btn btn-dark py-2 px-4">
+                                                        {purpose.value === "For rent" ? "Rent" : "Buy"}
                                                     </a>
                                                 </div>
                                             </div>

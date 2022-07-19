@@ -185,8 +185,8 @@ export default function Navbar() {
                 </Link>
               </div>
 
-              <div className="d-flex justify-content-between align-items-center p-4 m-2">
-                <h5 className="pe-4">
+              <div className="d-flex justify-content-between align-items-center p-4 m-3">
+                <h5 className="">
                   Hi, {user.displayName}
                 </h5>
                 <button className=" nav-item btn btn-dark py-3 px-lg-3" onClick={() => signOut(auth)}>Logout</button>

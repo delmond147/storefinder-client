@@ -4,12 +4,11 @@ import { auth, db } from "../firebase";
 import DeleteStore from "./DeleteStore";
 import { useAuthState } from "react-firebase-hooks/auth";
 import LikeStore from "./LikeStore";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Stores() {
     const [stores, setStores] = useState([]);
     const [user] = useAuthState(auth);
-    const navigate = useNavigate()
     useEffect(() => {
         const articleRef = collection(db, "stores");
         const q = query(articleRef, orderBy("createdAt", "desc"));
@@ -118,7 +117,7 @@ export default function Stores() {
                                                     <small className="flex-fill text-center border-end py-2"><i className="text-dark me-2"></i>{createdAt.toDate().toDateString()}</small>
 
                                                     <a href="/payment" className="btn btn-dark py-2 px-4" onClick={() => user ? navigate("/payment"): navigate("/signin")}>
-                                                        Rent
+                                                        {purpose.value === "For rent" ? "Buy" : "Rent"}
                                                     </a>
                                                 </div>
                                             </div>

@@ -185,7 +185,7 @@ export default function Navbar() {
                 </Link>
               </div>
 
-              <div className="d-flex justify-content-between align-items-center p-4 m-2">
+              <div className="d-flex justify-content-between align-items-center p-4 m-3">
                 <h5 className="pe-4">
                   Hi, {user.displayName}
                 </h5>

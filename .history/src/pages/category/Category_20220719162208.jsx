@@ -17,7 +17,7 @@ export default function Category() {
                             <a className="cat-item d-block bg-light text-center rounded p-3" href="/stores">
                                 <div className="rounded p-4">
                                     <div className="icon mb-3">
-                                        <i className="fa fa-home"></i>
+                                        <img className="img-fluid" src="img/icon-apartment.png" alt="Icon" />
                                     </div>
                                     <h6 className="text-light">SUPER MARKETS</h6>
                                     <span className="text-light">3 ITEMS</span>
@@ -28,7 +28,7 @@ export default function Category() {
                             <a className="cat-item d-block bg-light text-center rounded p-3" href="/stores">
                                 <div className="rounded p-4">
                                     <div className="icon mb-3">
-                                        <i className="fa fa-home"></i>
+                                        <img className="img-fluid" src="img/icon-villa.png" alt="Icon" />
                                     </div>
                                     <h6 className="text-light">GROCERY STORE</h6>
                                     <span className="text-light">2 ITEMS</span>
@@ -39,7 +39,7 @@ export default function Category() {
                             <a className="cat-item d-block bg-light text-center rounded p-3" href="/stores">
                                 <div className="rounded p-4">
                                     <div className="icon mb-3">
-                                        <i className="fa fa-home"></i>
+                                        <img className="img-fluid" src="img/icon-house.png" alt="Icon" />
                                     </div>
                                     <h6 className="text-light">BOOK STORE</h6>
                                     <span className="text-light">5 ITEMS</span>
@@ -50,7 +50,7 @@ export default function Category() {
                             <a className="cat-item d-block bg-light text-center rounded p-3" href="/stores">
                                 <div className="rounded p-4">
                                     <div className="icon mb-3">
-                                        <i className="fa fa-home"></i>
+                                        <i className="fa fa-home h3"></i>
                                     </div>
                                     <h6 className="text-light">FASION STORES</h6>
                                     <span className="text-light">6 ITEMS</span>
@@ -61,7 +61,7 @@ export default function Category() {
                             <a className="cat-item d-block bg-light text-center rounded p-3" href="/stores">
                                 <div className="rounded p-4">
                                     <div className="icon mb-3">
-                                        <i className="fa fa-home"></i>
+                                        <img className="img-fluid" src="img/icon-building.png" alt="Icon" />
                                     </div>
                                     <h6 className="text-light">GROCERY STORE</h6>
                                     <span className="text-light">123 Properties</span>
@@ -72,7 +72,7 @@ export default function Category() {
                             <a className="cat-item d-block bg-light text-center rounded p-3" href="/stores">
                                 <div className="rounded p-4">
                                     <div className="icon mb-3">
-                                        <i className="fa fa-home"></i>
+                                        <img className="img-fluid" src="img/icon-neighborhood.png" alt="Icon" />
                                     </div>
                                     <h6 className="text-light">OFFICES</h6>
                                     <span className="text-light">12 Properties</span>
@@ -83,7 +83,7 @@ export default function Category() {
                             <a className="cat-item d-block bg-light text-center rounded p-3" href="/stores">
                                 <div className="rounded p-4">
                                     <div className="icon mb-3">
-                                        <i className="fa fa-home"></i>
+                                        <img className="img-fluid" src="img/icon-condominium.png" alt="Icon" />
                                     </div>
                                     <h6 className="text-light">PHARMACY</h6>
                                     <span className="text-light">4 Properties</span>
@@ -94,7 +94,7 @@ export default function Category() {
                             <a className="cat-item d-block bg-light text-center rounded p-3" href="/stores">
                                 <div className="rounded p-4">
                                     <div className="icon mb-3">
-                                        <i className="fa fa-home"></i>
+                                        <img className="img-fluid" src="img/icon-luxury.png" alt="Icon" />
                                     </div>
                                     <h6 className="text-light">SALONE</h6>
                                     <span className="text-light">8 Properties</span>
