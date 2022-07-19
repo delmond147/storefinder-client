@@ -1,12 +1,24 @@
 // import "./App.css";
+
+import { useState, useEffect } from "react";
+import {useParams}
 import React from 'react'
-import { useState } from "react";
 import StripeCheckout from "react-stripe-checkout";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function Payment() {
+  const { id } = useParams();
+  const [store, setStore] = useState(null);
+  const [user] = useAuthState(auth);
+
+  useEffect(() => {
+    const docRef = doc(db, "stores", id);
+    onSnapshot(docRef, (snapshot) => {
+      setStore({ ...snapshot.data(), id: snapshot.id });
+    });
+  }, []);
 
   toast.configure()
 

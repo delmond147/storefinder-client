@@ -1,7 +1,7 @@
 const cors = require("cors");
 const express = require("express");
 const bodyparser = require('body-parser')
-const stripe = require("stripe")("sk_test_51JfPvMEohH2JsejczNjaWW9TMf6H59v3ankVuV6qhO3FusFJxM0pTrs2LkyN6nwkhyb14mCjIkqUhH4XGNYuoYj000ti65YkBH");
+const stripe = require("stripe")("##stripesecretkey##");
 const uuid = require("uuid").v4;
 
 const app = express();
@@ -31,7 +31,7 @@ app.post("/checkout", async (req, res) => {
     const charge = await stripe.charges.create(
       {
         amount: product.price * 100,
-        currency: "XAF",
+        currency: "usd",
         customer: customer.id,
         receipt_email: token.email,
         description: `Purchased the ${product.name}`,

@@ -1,9 +1,13 @@
 // import "./App.css";
-import React from 'react'
+
 import { useState } from "react";
+
 import StripeCheckout from "react-stripe-checkout";
+
 import axios from "axios";
+
 import { toast } from "react-toastify";
+
 import "react-toastify/dist/ReactToastify.css";
 
 function Payment() {
@@ -11,8 +15,8 @@ function Payment() {
   toast.configure()
 
   const [product] = useState({
-    name: "Property payment",
-    price: 12000,
+    name: "Sample Book",
+    price: 120,
     description: "This is a sample book",
   });
 
@@ -51,7 +55,7 @@ function Payment() {
             stripeKey="pk_test_51JfPvMEohH2JsejcMYZq7wyh7kAvjQ7CSXuKJE7Cx68n7zZyo33xmLAyQaW60ntusgiKHrQfHYEVK7SXr8pwJw7C00Mj6h2o2M"
             token={handleToken}
             amount={product.price * 100}
-            name="Store Payment"
+            name="Sample Book"
             billingAddress
             shippingAddress
           />

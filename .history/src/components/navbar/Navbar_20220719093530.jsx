@@ -118,13 +118,13 @@ export default function Navbar() {
               <div className="d-lg-flex">
                 <Link
                   to="/signin"
-                  className="nav-item btn btn-dark d-flex py-3 px-lg-4 p-4 m-3"
+                  className="nav-item btn btn-dark d-flex py-3 px-lg-4 p-4 m-2"
                 >
                   Login
                 </Link>
                 <Link
                   to="/signup"
-                  className="nav-item btn btn-dark d-flex py-3 px-lg-3 p-4 m-3"
+                  className="nav-item btn btn-dark d-flex py-3 px-lg-3 p-4 m-2"
                 >
                   Register
                 </Link>
