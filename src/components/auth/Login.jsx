@@ -1,49 +1,46 @@
-import React, { useState } from "react"
-import {auth} from '../../firebase'
-import {toast} from 'react-toastify'
-import { Link, useNavigate } from "react-router-dom"
-import {useUserAuth} from '../../context/UserAuthContext'
-import {signInWithEmailAndPassword} from 'firebase/auth'
-import GoogleButton from "react-google-button"
+import React, { useState } from "react";
+import { auth } from "../../firebase";
+import { toast } from "react-toastify";
+import { Link, useNavigate } from "react-router-dom";
+import { useUserAuth } from "../../context/UserAuthContext";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import GoogleButton from "react-google-button";
 
 function Login() {
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  const {googleSignIn} = useUserAuth()
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const { googleSignIn } = useUserAuth();
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    
+    e.preventDefault();
+
     try {
-      await signInWithEmailAndPassword(auth, email, password)
-      navigate("/")
+      await signInWithEmailAndPassword(auth, email, password);
+      navigate("/stores");
     } catch (error) {
-      toast(error.code, {type: "error"})
+      toast(error.code, { type: "error" });
     }
-  }
+  };
 
   const handleGoogleSignIn = async (e) => {
-    e.preventDefault()
-    
+    e.preventDefault();
+
     try {
-      await googleSignIn()
-      navigate("/")
+      await googleSignIn();
+      navigate("/stores");
     } catch (error) {
-      toast(error.code, { type: "error"})
+      toast(error.code, { type: "error" });
     }
-  }
+  };
 
   return (
     <>
-      <div className="container bg-dark col-lg-4 col-md-6 col-sm-7 pt-2 mt-5 card">
-        {/* <div className="d-flex justify-content-center align-items-center mb-3">
-          <img src="images/avatar-150.png" className="rounded-circle" alt="" />
-        </div> */}
+      <div className="container bg-dark col-lg-4 col-md-6 col-sm-7 pt-2 mt-5 relative card">
         <div className="d-flex justify-content-center align-items-center mb-4 mt-4">
-          <Link to="/" className="navbar-brand" >
-            <i className="fa fa-home me-1"></i>
+          <Link to="/" className="navbar-brand">
+            <i className="fa fa-home"></i>
           </Link>
           <h3 className="text-center text-light">Login to Finder✌️</h3>
         </div>
