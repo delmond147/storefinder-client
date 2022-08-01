@@ -40,6 +40,8 @@
     opacity: 1;
 }
 
+
+
 /*** Button ***/
 .btn {
     transition: .5s;
@@ -393,10 +395,10 @@
     transition: .5s;
 }
 
-/* .team-item img {
-    width: 400px;
-    height: 300px;
-} */
+.team-item img {
+    /* width: 400px; */
+    height: 250px;
+}
 
 .service-item:hover img,
 .team-item:hover img {
