@@ -6,15 +6,14 @@ import { auth, db } from "../firebase";
 import DeleteStore from "./DeleteStore";
 import { useAuthState } from "react-firebase-hooks/auth";
 import LikeStore from "./LikeStore";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Stores() {
   const [stores, setStores] = useState([]);
   const [user] = useAuthState(auth);
   const [showMore, setShowMore] = useState(false);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  // const navigate = useNavigate()
   useEffect(() => {
     const storeRef = collection(db, "stores");
     const q = query(storeRef, orderBy("createdAt", "desc"));
@@ -152,7 +151,7 @@ export default function Stores() {
                                 className="text-secondary"
                                 onClick={() => setShowMore(!showMore)}
                               >
-                                {showMore ? "show more" : "show less"}
+                                {showMore ? "show more" : "..."}
                               </p>
                             </p>
                           </div>
@@ -178,9 +177,7 @@ export default function Stores() {
                             {createdAt.toDate().toDateString()}
                           </small>
 
-                          <button className="btn btn-dark px-3">
-                            {user && navigate("/checkout")}
-                          </button>
+                          <button className="btn btn-dark px-3">Rent</button>
                         </div>
                       </div>
                     </div>

@@ -1,11 +1,8 @@
 import React from "react";
-import Navbar from "../../components/navbar/Navbar";
-import Footer from "../../components/footer/Footer";
 
 export default function About() {
   return (
     <>
-      <Navbar />
       <div className="container-xxl service py-5">
         <div className="container">
           <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -299,7 +296,6 @@ export default function About() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

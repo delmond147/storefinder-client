@@ -7,6 +7,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import { Alert } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import Footer from "../components/footer/Footer";
 
 export default function AddStore() {
   const [user] = useAuthState(auth);
@@ -111,131 +112,134 @@ export default function AddStore() {
   };
 
   return (
-    <div className="container bg-dark col-lg-4 col-md-6 col-sm-7 pt-2 mt-2 mb-2 card ">
-      {!user ? (
-        navigate("/signin")
-      ) : (
-        <>
-          <div className="d-flex justify-content-center align-items-center mb-4 mt-4">
-            <Link to="/" className="navbar-brand">
-              <i className="fa fa-home me-1"></i>
-            </Link>
-            <h3 className="text-center text-light">Add Store✌️</h3>
-          </div>
-
-          <div className="form-floating mb-3">
-            <input
-              type="text"
-              name="title"
-              className="form-control"
-              value={formData.title}
-              onChange={(e) => handleChange(e)}
-            />
-            <label for="floatingInput">Title</label>
-          </div>
-
-          <div className="form-floating mb-3">
-            <input
-              type="text"
-              name="category"
-              value={formData.category}
-              class="form-control"
-              id="floatingInput"
-              onChange={(e) => handleChange(e)}
-            />
-            <label for="floatingInput">Add category</label>
-          </div>
-
-          <div className="form-floating mb-3">
-            <input
-              type="text"
-              name="purpose"
-              value={formData.purpose}
-              class="form-control"
-              id="floatingInput"
-              onChange={(e) => handleChange(e)}
-            />
-            <label for="floatingInput">Purpose, For rent or For sell</label>
-          </div>
-
-          <div className="form-floating mb-3">
-            <input
-              type="number"
-              name="amount"
-              value={formData.amount}
-              class="form-control"
-              id="floatingInput"
-              onChange={(e) => handleChange(e)}
-            />
-            <label for="floatingInput">Amount</label>
-          </div>
-
-          <div className="form-floating mb-3">
-            <input
-              type="text"
-              name="location"
-              value={formData.location}
-              class="form-control"
-              id="floatingInput"
-              onChange={(e) => handleChange(e)}
-            />
-            <label for="floatingInput">City</label>
-          </div>
-
-          <div className="form-floating mb-3">
-            <input
-              type="number"
-              name="size"
-              value={formData.size}
-              class="form-control"
-              id="floatingInput"
-              onChange={(e) => handleChange(e)}
-            />
-            <label for="floatingInput">Area</label>
-          </div>
-
-          {/* description */}
-          <div className="form-floating mb-3">
-            <textarea
-              style={{ height: "100px" }}
-              name="description"
-              className="form-control"
-              value={formData.description}
-              onChange={(e) => handleChange(e)}
-            />
-            <label htmlFor="">Description</label>
-          </div>
-
-          {/* image */}
-          <div className="form-group mb-3">
-            <label htmlFor="">Image</label>
-            <input
-              type="file"
-              name="image"
-              accept="image/*"
-              className="form-control"
-              onChange={(e) => handleImageChange(e)}
-            />
-          </div>
-
-          {progress === 0 ? null : (
-            <div className="progress">
-              <div
-                className="progress-bar progress-bar-striped mt-2"
-                style={{ width: `${progress}%` }}
-              >
-                {`uploading image ${progress}%`}
-              </div>
+    <>
+      <div className="container bg-dark col-lg-4 col-md-6 col-sm-7 pt-2 mt-2 mb-2 card ">
+        {!user ? (
+          navigate("/signin")
+        ) : (
+          <>
+            <div className="d-flex justify-content-center align-items-center mb-4 mt-4">
+              <Link to="/" className="navbar-brand">
+                <i className="fa fa-home me-1"></i>
+              </Link>
+              <h3 className="text-center text-light">Add Store✌️</h3>
             </div>
-          )}
-          <button
-            className="form-control btn-primary mt-2 mb-3"
-            onClick={handlePublish}
-          >
-            Add Store
-          </button>
-        </>
-      )}
-    </div>
+
+            <div className="form-floating mb-3">
+              <input
+                type="text"
+                name="title"
+                className="form-control"
+                value={formData.title}
+                onChange={(e) => handleChange(e)}
+              />
+              <label for="floatingInput">Title</label>
+            </div>
+
+            <div className="form-floating mb-3">
+              <input
+                type="text"
+                name="category"
+                value={formData.category}
+                class="form-control"
+                id="floatingInput"
+                onChange={(e) => handleChange(e)}
+              />
+              <label for="floatingInput">Add category</label>
+            </div>
+
+            <div className="form-floating mb-3">
+              <input
+                type="text"
+                name="purpose"
+                value={formData.purpose}
+                class="form-control"
+                id="floatingInput"
+                onChange={(e) => handleChange(e)}
+              />
+              <label for="floatingInput">Purpose, For rent or For sell</label>
+            </div>
+
+            <div className="form-floating mb-3">
+              <input
+                type="number"
+                name="amount"
+                value={formData.amount}
+                class="form-control"
+                id="floatingInput"
+                onChange={(e) => handleChange(e)}
+              />
+              <label for="floatingInput">Amount</label>
+            </div>
+
+            <div className="form-floating mb-3">
+              <input
+                type="text"
+                name="location"
+                value={formData.location}
+                class="form-control"
+                id="floatingInput"
+                onChange={(e) => handleChange(e)}
+              />
+              <label for="floatingInput">City</label>
+            </div>
+
+            <div className="form-floating mb-3">
+              <input
+                type="number"
+                name="size"
+                value={formData.size}
+                class="form-control"
+                id="floatingInput"
+                onChange={(e) => handleChange(e)}
+              />
+              <label for="floatingInput">Area</label>
+            </div>
+
+            {/* description */}
+            <div className="form-floating mb-3">
+              <textarea
+                style={{ height: "100px" }}
+                name="description"
+                className="form-control"
+                value={formData.description}
+                onChange={(e) => handleChange(e)}
+              />
+              <label htmlFor="">Description</label>
+            </div>
+
+            {/* image */}
+            <div className="form-group mb-3">
+              <label htmlFor="">Image</label>
+              <input
+                type="file"
+                name="image"
+                accept="image/*"
+                className="form-control"
+                onChange={(e) => handleImageChange(e)}
+              />
+            </div>
+
+            {progress === 0 ? null : (
+              <div className="progress">
+                <div
+                  className="progress-bar progress-bar-striped mt-2"
+                  style={{ width: `${progress}%` }}
+                >
+                  {`uploading image ${progress}%`}
+                </div>
+              </div>
+            )}
+            <button
+              className="form-control btn-primary mt-2 mb-3"
+              onClick={handlePublish}
+            >
+              Add Store
+            </button>
+          </>
+        )}
+      </div>
+      <Footer />
+    </>
   );
 }
