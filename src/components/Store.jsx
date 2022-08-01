@@ -4,7 +4,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useParams } from "react-router-dom";
 import { auth, db } from "../firebase";
 import LikeStore from "./LikeStore";
-import Comment from './Comment';
+import Comment from "./Comment";
 
 export default function Stores() {
   const { id } = useParams();

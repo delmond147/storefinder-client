@@ -6,8 +6,7 @@ import { toast } from "react-toastify";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import { Alert } from "react-bootstrap";
-import { useNavigate } from 'react-router-dom'
-
+import { useNavigate } from "react-router-dom";
 
 export default function AddStore() {
   const [user] = useAuthState(auth);
@@ -23,7 +22,7 @@ export default function AddStore() {
     createdAt: Timestamp.now().toDate(),
   });
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [progress, setProgress] = useState(0);
 
   const handleChange = (e) => {
@@ -82,8 +81,8 @@ export default function AddStore() {
         });
 
         getDownloadURL(uploadImage.snapshot.ref).then((url) => {
-          const articleRef = collection(db, "stores");
-          addDoc(articleRef, {
+          const storeRef = collection(db, "stores");
+          addDoc(storeRef, {
             title: formData.title,
             category: formData.category,
             purpose: formData.purpose,
@@ -101,6 +100,7 @@ export default function AddStore() {
             .then(() => {
               toast("Store added successfully", { type: "success" });
               setProgress(0);
+              navigate("/stores");
             })
             .catch((err) => {
               toast("Error adding Store", { type: "error" });
@@ -111,10 +111,10 @@ export default function AddStore() {
   };
 
   return (
-    <div className="container bg-dark col-lg-4 col-md-6 col-sm-7 pt-2 mt-2 mb-2 card">
+    <div className="container bg-dark col-lg-4 col-md-6 col-sm-7 pt-2 mt-2 mb-2 card ">
       {!user ? (
         navigate("/signin")
-      ): (
+      ) : (
         <>
           <div className="d-flex justify-content-center align-items-center mb-4 mt-4">
             <Link to="/" className="navbar-brand">
@@ -208,14 +208,14 @@ export default function AddStore() {
 
           {/* image */}
           <div className="form-group mb-3">
-          <label htmlFor="">Image</label>
-          <input
-            type="file"
-            name="image"
-            accept="image/*"
-            className="form-control"
-            onChange={(e) => handleImageChange(e)}
-          />
+            <label htmlFor="">Image</label>
+            <input
+              type="file"
+              name="image"
+              accept="image/*"
+              className="form-control"
+              onChange={(e) => handleImageChange(e)}
+            />
           </div>
 
           {progress === 0 ? null : (
@@ -228,7 +228,10 @@ export default function AddStore() {
               </div>
             </div>
           )}
-          <button className="form-control btn-primary mt-2 mb-3" onClick={handlePublish}>
+          <button
+            className="form-control btn-primary mt-2 mb-3"
+            onClick={handlePublish}
+          >
             Add Store
           </button>
         </>

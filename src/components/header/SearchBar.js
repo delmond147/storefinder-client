@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom'
 import { getDocs } from 'firebase/firestore'
 
 export default function SearchBar() {
-    const [purpose, setPurpose] = useState("")
     const [category, setCategory] = useState("")
     const [location, setLocation] = useState("")
     const [error, setError] = useState("")
@@ -33,16 +32,13 @@ export default function SearchBar() {
                         <div className="col-md-12 col-12">
                             <form onSubmit={handleSubmit}>
                                 <div className="row g-2 ">
-                                    <div className="col-md-3">
-                                        <input type="text" className="form-control border-0 py-3" placeholder="Rent or Buy" value={purpose} onChange={(e) => setPurpose(e.target.value)} />
+                                    <div className="col-md-5">
+                                        <input className="form-control border-0 py-3" placeholder="Category (Office, Supermarket) etc." value={category} onChange={(e) => setCategory(e.target.value)} />
                                     </div>
-                                    <div className="col-md-3">
-                                        <input className="form-control border-0 py-3" placeholder="Category (Office, Supermarket, Grocery) etc." value={category} onChange={(e) => setCategory(e.target.value)} />
-                                    </div>
-                                    <div className="col-md-3">
+                                    <div className="col-md-5">
                                         <input className="form-control border-0 py-3" placeholder="City" value={location} onChange={(e) => setLocation(e.target.value)} />
                                     </div>
-                                    <div className="col-3">
+                                    <div className="col-2">
                                         <button type="submit" className="btn btn-dark px-3 py-3 d-flex justify-content-center align-items-center col-lg-12"><i className="fa fa-search me-3"></i>Search</button>
                                     </div>
                                 </div>

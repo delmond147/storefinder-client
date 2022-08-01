@@ -12,19 +12,22 @@ export default function LikeArticle({ id, likes }) {
     if (likes?.includes(user.uid)) {
       updateDoc(likesRef, {
         likes: arrayRemove(user.uid),
-      }).then(() => {
+      })
+        .then(() => {
           console.log("unliked");
-      }).catch((e) => {
-            console.log(e);
-      });
-    }
-    else{
-        updateDoc(likesRef,{
-            likes:arrayUnion(user.uid)
-        }).then(() => {
-            console.log("liked");
-        }).catch((e) => {
-              console.log(e);
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    } else {
+      updateDoc(likesRef, {
+        likes: arrayUnion(user.uid),
+      })
+        .then(() => {
+          console.log("liked");
+        })
+        .catch((e) => {
+          console.log(e);
         });
     }
   };
