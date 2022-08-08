@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 export default function Footer() {
   return (
     <>
@@ -16,17 +16,14 @@ export default function Footer() {
                 <i className="fa fa-map-marker text-secondary me-3"></i>348
                 Bonaberi, Douala, Cameroon
               </p>
-              <Link to="Tel:+237680749528" className="mb-2 text-white">
+              <a href="Tel:+237680749528" className="mb-2 text-white">
                 <i className="fa fa-phone text-secondary me-3"></i>+237680749528
-              </Link>
+              </a>
               <br />
-              <Link
-                to="mailto:dnyingchuo@gmail.com"
-                className="mb-2 text-white"
-              >
+              <a href="mailto:dnyingchuo@gmail.com" className="mb-2 text-white">
                 <i className="fa fa-envelope text-secondary me-3"></i>
                 dnyingchuo@gmail.com
-              </Link>
+              </a>
 
               <div className="d-flex pt-2">
                 <Link className="btn btn-secondary btn-social" to="#home">
@@ -48,19 +45,18 @@ export default function Footer() {
             </div>
             <div className="col-lg-4 col-md-6">
               <h5 className="text-white mb-4">Quick Links</h5>
-              <Link className="btn btn-link text-white-50" to="/about">
+              <a className="btn btn-link text-white-50" href="/about">
                 About Us
-              </Link>
-
-              <Link className="btn btn-link text-white-50" to="/booking">
-                Booking
-              </Link>
-              <Link className="btn btn-link text-white-50" to="/stores">
+              </a>
+              <a className="btn btn-link text-white-50" href="/stores">
                 Stores
-              </Link>
-              <Link className="btn btn-link text-white-50" to="/team">
+              </a>
+              <a className="btn btn-link text-white-50" href="/team">
                 Our Team
-              </Link>
+              </a>
+              <a className="btn btn-link text-white-50" href="/contact">
+                Contact
+              </a>
             </div>
 
             <div className="col-lg-4 col-md-6">
@@ -70,7 +66,7 @@ export default function Footer() {
               </p>
               <div
                 className="position-relative mx-auto"
-                style={{ maxWidth: "400px" }}
+                style={{ maxWidth: '400px' }}
               >
                 <input
                   className="text-white-50 form-control bg-transparent w-100 py-3 ps-4 pe-5"
@@ -93,16 +89,16 @@ export default function Footer() {
             <div className="row">
               <div className="text-md-center mb-0">
                 <div className="text-center">
-                  &copy; Copyright{" "}
+                  &copy; Copyright{' '}
                   <Link className="text-primary" to="/">
                     Finder
-                  </Link>{" "}
+                  </Link>{' '}
                   All Right Reserved.
                 </div>
 
                 {/* This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. */}
                 <div className="text-center">
-                  Designed By{" "}
+                  Designed By{' '}
                   <Link className="text-primary" to="/dgitech">
                     Dgitech
                   </Link>

@@ -1,22 +1,20 @@
-import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
-import React, { useState, useEffect } from "react";
-import Pagination from "react-bootstrap/Pagination";
-// import Checkout from "./Checkout";
-import { auth, db } from "../firebase";
-import DeleteStore from "./DeleteStore";
-import { useAuthState } from "react-firebase-hooks/auth";
-import LikeStore from "./LikeStore";
-import { Link } from "react-router-dom";
+import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
+import React, { useState, useEffect } from 'react';
+import Pagination from 'react-bootstrap/Pagination';
+import { auth, db } from '../firebase';
+import DeleteStore from './DeleteStore';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import LikeStore from './LikeStore';
+import { useNavigate } from 'react-router-dom';
 
 export default function Stores() {
   const [stores, setStores] = useState([]);
   const [user] = useAuthState(auth);
-  const [showMore, setShowMore] = useState(false);
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const storeRef = collection(db, "stores");
-    const q = query(storeRef, orderBy("createdAt", "desc"));
+    const storeRef = collection(db, 'stores');
+    const q = query(storeRef, orderBy('createdAt', 'desc'));
     onSnapshot(q, (snapshot) => {
       const stores = snapshot.docs.map((doc) => ({
         id: doc.id,
@@ -42,18 +40,28 @@ export default function Stores() {
               </p>
             </div>
           </div>
-
           <div
             className="col-lg-6 text-start text-lg-end wow slideInRight"
             data-wow-delay="0.1s"
           >
-            <Link
-              to="/add"
-              className="btn btn-warning add-btn text-warning px-3 py-3 me-2"
-            >
-              Add Store
-            </Link>
             <ul className="nav nav-pills d-inline-flex justify-content-end mb-5">
+              <li className="nav-item me-2">
+                {user ? (
+                  <button
+                    onClick={() => navigate('/register-store')}
+                    className="btn btn-warning add-btn text-warning px-3 py-3 me-2"
+                  >
+                    Register Store
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => navigate('/signin')}
+                    className="btn btn-warning add-btn text-warning px-3 py-3 me-2"
+                  >
+                    Register Store
+                  </button>
+                )}
+              </li>
               <li className="nav-item me-2">
                 <button
                   className="btn btn-outline-primary px-3 py-3"
@@ -62,7 +70,6 @@ export default function Stores() {
                   For Sell
                 </button>
               </li>
-
               <li className="nav-item me-0">
                 <button
                   className="btn btn-outline-primary px-3 py-3"
@@ -91,7 +98,7 @@ export default function Stores() {
                     amount,
                     location,
                     size,
-                    description,
+                    contact,
                     imageUrl,
                     createdAt,
                     createdBy,
@@ -120,13 +127,12 @@ export default function Stores() {
                           </div>
                         </div>
                         <div className="position-relative overflow-hidden">
-                          <Link to={`/stores/${id}`}>
-                            <img
-                              className="img-fluid"
-                              src={imageUrl}
-                              alt="Property"
-                            />
-                          </Link>
+                          <img
+                            className="img-fluid"
+                            src={imageUrl}
+                            alt="Property"
+                          />
+
                           <div className="bg-dark rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">
                             {purpose}
                           </div>
@@ -136,24 +142,19 @@ export default function Stores() {
                         </div>
                         <div className="p-4 pb-0">
                           <h5 className="text-dark mb-2">{amount} FCFA</h5>
-                          <p className="h6 text-secondary">{title}</p>
-                          <Link to="/location" className="text-primary">
+
+                          <p className="h6 text-dark">{title}</p>
+
+                          <a href="https://googlmaps." className="text-primary">
                             <i className="fa fa-map-marker text-primary me-2"></i>
                             {location}
-                          </Link>
+                          </a>
 
-                          <div className="d-flex justify-content-center align-items-center">
-                            <p className="text-dark">
-                              {showMore
-                                ? description
-                                : `${description.substring(0, 150)}`}
-                              <p
-                                className="text-secondary"
-                                onClick={() => setShowMore(!showMore)}
-                              >
-                                {showMore ? "show more" : "..."}
-                              </p>
-                            </p>
+                          <div className="">
+                            <a href={`tel:${contact}`} className="text-dark">
+                              <i className="fa fa-phone text-primary me-3"></i>
+                              {contact}
+                            </a>
                           </div>
                         </div>
                         <div className="d-flex flex-row-reverse">
@@ -176,8 +177,21 @@ export default function Stores() {
                             <i className="text-dark me-2"></i>
                             {createdAt.toDate().toDateString()}
                           </small>
-
-                          <button className="btn btn-dark px-3">Rent</button>
+                          {user ? (
+                            <button
+                              onClick={() => navigate('/checkout')}
+                              className="btn btn-dark px-3"
+                            >
+                              Rent
+                            </button>
+                          ) : (
+                            <button
+                              onClick={() => navigate('/signin')}
+                              className="btn btn-dark px-3"
+                            >
+                              Rent
+                            </button>
+                          )}
                         </div>
                       </div>
                     </div>
@@ -198,10 +212,6 @@ export default function Stores() {
           <Pagination.Item active>{1}</Pagination.Item>
           <Pagination.Ellipsis />
           <Pagination.Item>{10}</Pagination.Item>
-          <Pagination.Item>{11}</Pagination.Item>
-          <Pagination.Item>{12}</Pagination.Item>
-          <Pagination.Item>{13}</Pagination.Item>
-          <Pagination.Item disabled>{14}</Pagination.Item>
           <Pagination.Ellipsis />
           <Pagination.Item>{20}</Pagination.Item>
           <Pagination.Next />

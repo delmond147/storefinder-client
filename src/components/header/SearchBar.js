@@ -28,8 +28,8 @@ export default function SearchBar() {
             <div className="container-xxl bg-dark mb-3 wow fadeIn" data-wow-delay="0.1s" style={{ padding: '35px' }}>
                 <div className="container">
                     <div className="row">
-                        <p className="mb-3 text-center">{error && <Alert variant="danger" dismissible onClose={() => setError("")}>{ error}</Alert>}</p>
-                        <div className="col-md-12 col-12">
+                        <p className="mb-3 text-center">{error && <Alert variant="danger" dismissible onClose={() => setError("")}>{error}</Alert>}</p>
+                        <div className="col-md-12">
                             <form onSubmit={handleSubmit}>
                                 <div className="row g-2 ">
                                     <div className="col-md-5">
@@ -38,13 +38,13 @@ export default function SearchBar() {
                                     <div className="col-md-5">
                                         <input className="form-control border-0 py-3" placeholder="City" value={location} onChange={(e) => setLocation(e.target.value)} />
                                     </div>
-                                    <div className="col-2">
-                                        <button type="submit" className="btn btn-dark px-3 py-3 d-flex justify-content-center align-items-center col-lg-12"><i className="fa fa-search me-3"></i>Search</button>
+                                    <div className="col-md-2">
+                                        <button type="submit" className="btn btn-dark py-3 "><i className="fa fa-search me-3"></i></button>
                                     </div>
                                 </div>
                             </form>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
