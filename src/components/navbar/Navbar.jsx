@@ -1,13 +1,11 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../firebase";
-import { signOut } from "firebase/auth";
-import AddStore from "../AddStore";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth } from '../../firebase';
+import { signOut } from 'firebase/auth';
 
 export default function Navbar() {
   const [user] = useAuthState(auth);
-  const [openAddStore, setOpenAddStore] = useState(false);
   return (
     <>
       {/* Topbar Start */}
@@ -28,35 +26,35 @@ export default function Navbar() {
           <div className="col-lg-5 px-5 text-end">
             <div className="h-100 d-inline-flex align-items-center py-3 me-4">
               <small className="fa fa-phone text-secondary me-2"></small>
-              <Link to="Tel:+237680749528" className="text-light">
+              <a href="Tel:+237680749528" className="text-light">
                 +237680749528
-              </Link>
+              </a>
             </div>
             <div className="h-100 d-inline-flex align-items-center">
-              <Link
+              <a
                 className="btn btn-sm-square bg-white text-white me-1"
-                to="#home"
+                href="#home"
               >
                 <i className="fab fa-facebook-f"></i>
-              </Link>
-              <Link
+              </a>
+              <a
                 className="btn btn-sm-square bg-white text-white me-1"
-                to="#home"
+                href="#home"
               >
                 <i className="fab fa-twitter"></i>
-              </Link>
-              <Link
+              </a>
+              <a
                 className="btn btn-sm-square bg-white text-white me-1"
-                to="#home"
+                href="#home"
               >
                 <i className="fab fa-linkedin-in"></i>
-              </Link>
-              <Link
+              </a>
+              <a
                 className="btn btn-sm-square bg-white text-white me-0"
-                to="#home"
+                href="#home"
               >
                 <i className="fab fa-instagram"></i>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -104,15 +102,13 @@ export default function Navbar() {
                     <Link to="/stores" className="dropdown-item">
                       Stores
                     </Link>
-                    <Link to="/booking" className="dropdown-item">
+                    {/* <Link to="/booking" className="dropdown-item">
                       Booking
+                    </Link> */}
+
+                    <Link to="/register-store" className="dropdown-item">
+                      Register Store
                     </Link>
-                    <button
-                      className="dropdown-item"
-                      onClick={() => setOpenAddStore(true)}
-                    >
-                      Register Your Store
-                    </button>
                   </div>
                 </div>
 
@@ -177,11 +173,11 @@ export default function Navbar() {
                     <Link to="/stores" className="dropdown-item">
                       Stores
                     </Link>
-                    <Link to="/booking" className="dropdown-item">
+                    {/* <Link to="/booking" className="dropdown-item">
                       Booking
-                    </Link>
-                    <Link to="/add" className="dropdown-item">
-                      Register Your Store
+                    </Link> */}
+                    <Link to="/register-store" className="dropdown-item">
+                      Register Store
                     </Link>
                   </div>
                 </div>
@@ -192,7 +188,9 @@ export default function Navbar() {
               </div>
 
               <div className="d-flex justify-content-between align-items-center m-4">
-                <p className="pe-4">Hi, {user.displayName}</p>
+                <p className="pe-4 justify-content-center">
+                  Hi, {user.displayName}
+                </p>
                 <button
                   className=" nav-item btn btn-dark py-3 px-lg-3"
                   onClick={() => signOut(auth)}
@@ -203,8 +201,6 @@ export default function Navbar() {
             </div>
           </>
         )}
-
-        {openAddStore && <AddStore />}
       </nav>
       {/* <!-- Navbar End --> */}
     </>

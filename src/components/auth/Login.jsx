@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import { auth } from "../../firebase";
-import { toast } from "react-toastify";
-import { Link, useNavigate } from "react-router-dom";
-import { useUserAuth } from "../../context/UserAuthContext";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import GoogleButton from "react-google-button";
+import React, { useState } from 'react';
+import { auth } from '../../firebase';
+import { toast } from 'react-toastify';
+import { Link, useNavigate } from 'react-router-dom';
+import { useUserAuth } from '../../context/UserAuthContext';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import GoogleButton from 'react-google-button';
 
 function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const { googleSignIn } = useUserAuth();
 
   const navigate = useNavigate();
@@ -18,26 +18,25 @@ function Login() {
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      navigate("/stores");
+      navigate('/stores');
     } catch (error) {
-      toast(error.code, { type: "error" });
+      toast(error.code, { type: 'error' });
     }
   };
 
   const handleGoogleSignIn = async (e) => {
     e.preventDefault();
-
     try {
       await googleSignIn();
-      navigate("/stores");
+      navigate('/stores');
     } catch (error) {
-      toast(error.code, { type: "error" });
+      toast(error.code, { type: 'error' });
     }
   };
 
   return (
     <>
-      <div className="container bg-dark col-lg-4 col-md-6 col-sm-7 pt-2 mt-5 relative card">
+      <div className="container bg-dark col-lg-4 col-md-6 col-sm-7 pt-2 mt-4 relative card">
         <div className="d-flex justify-content-center align-items-center mb-4 mt-4">
           <Link to="/" className="navbar-brand">
             <i className="fa fa-home"></i>

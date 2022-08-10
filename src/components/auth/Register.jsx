@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { auth } from "../../firebase";
-import { toast } from "react-toastify";
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
+import { auth } from '../../firebase';
+import { toast } from 'react-toastify';
 
 const Register = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -15,15 +15,15 @@ const Register = () => {
     try {
       await createUserWithEmailAndPassword(auth, email, password);
       updateProfile(auth.currentUser, { displayName: name || email });
-      navigate("/signin");
+      navigate('/signin');
     } catch (error) {
-      toast(error.code, { type: "error" });
+      toast(error.code, { type: 'error' });
     }
   };
 
   return (
     <>
-      <div className="container bg-dark col-lg-4 col-md-6 col-sm-7 pt-3 card mt-5">
+      <div className="container bg-dark col-lg-4 col-md-6 col-sm-7 pt-3 card mt-4">
         <div className="d-flex justify-content-center align-items-center pt-4 mb-4 ">
           <Link to="/" className="navbar-brand">
             <i className="fa fa-home"></i>

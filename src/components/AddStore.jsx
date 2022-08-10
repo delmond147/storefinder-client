@@ -1,25 +1,26 @@
-import React, { useState } from "react";
-import { Timestamp, collection, addDoc } from "firebase/firestore";
-import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { storage, db, auth } from "./../firebase";
-import { toast } from "react-toastify";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { Link } from "react-router-dom";
-import { Alert } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
-import Footer from "../components/footer/Footer";
+import React, { useState } from 'react';
+import { Timestamp, collection, addDoc } from 'firebase/firestore';
+import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
+import { storage, db, auth } from './../firebase';
+import { toast } from 'react-toastify';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link } from 'react-router-dom';
+import { Alert } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+import Footer from '../components/footer/Footer';
 
 export default function AddStore() {
   const [user] = useAuthState(auth);
   const [formData, setFormData] = useState({
-    title: "",
-    category: "",
-    purpose: "",
-    amount: 0,
-    location: "",
-    size: 0,
-    description: "",
-    image: "",
+    title: '',
+    category: '',
+    purpose: '',
+    amount: Number,
+    location: '',
+    contact: Number,
+    size: Number,
+    description: '',
+    image: '',
     createdAt: Timestamp.now().toDate(),
   });
 
@@ -41,8 +42,8 @@ export default function AddStore() {
       !formData.purpose ||
       !formData.amount ||
       !formData.location ||
+      !formData.contact ||
       !formData.size ||
-      !formData.description ||
       !formData.image
     ) {
       <Alert variant="danger" dismissible>
@@ -59,7 +60,7 @@ export default function AddStore() {
     const uploadImage = uploadBytesResumable(storageRef, formData.image);
 
     uploadImage.on(
-      "state_changed",
+      'state_changed',
       (snapshot) => {
         const progressPercent = Math.round(
           (snapshot.bytesTransferred / snapshot.totalBytes) * 100
@@ -71,26 +72,27 @@ export default function AddStore() {
       },
       () => {
         setFormData({
-          title: "",
-          category: "",
-          purpose: "",
-          amount: 0,
-          location: "",
-          size: 0,
-          description: "",
-          image: "",
+          title: '',
+          category: '',
+          purpose: '',
+          amount: null,
+          location: '',
+          contact: null,
+          size: null,
+          description: '',
+          image: '',
         });
 
         getDownloadURL(uploadImage.snapshot.ref).then((url) => {
-          const storeRef = collection(db, "stores");
+          const storeRef = collection(db, 'stores');
           addDoc(storeRef, {
             title: formData.title,
             category: formData.category,
             purpose: formData.purpose,
             amount: formData.amount,
             location: formData.location,
+            contact: formData.contact,
             size: formData.size,
-            description: formData.description,
             imageUrl: url,
             createdAt: Timestamp.now().toDate(),
             createdBy: user.displayName,
@@ -99,12 +101,12 @@ export default function AddStore() {
             comments: [],
           })
             .then(() => {
-              toast("Store added successfully", { type: "success" });
+              toast('Store added successfully', { type: 'success' });
               setProgress(0);
-              navigate("/stores");
+              navigate('/stores');
             })
             .catch((err) => {
-              toast("Error adding Store", { type: "error" });
+              toast('Error adding Store', { type: 'error' });
             });
         });
       }
@@ -115,7 +117,7 @@ export default function AddStore() {
     <>
       <div className="container bg-dark col-lg-4 col-md-6 col-sm-7 pt-2 mt-2 mb-2 card ">
         {!user ? (
-          navigate("/signin")
+          navigate('/signin')
         ) : (
           <>
             <div className="d-flex justify-content-center align-items-center mb-4 mt-4">
@@ -198,14 +200,14 @@ export default function AddStore() {
 
             {/* description */}
             <div className="form-floating mb-3">
-              <textarea
-                style={{ height: "100px" }}
-                name="description"
+              <input
+                type="number"
+                name="contact"
                 className="form-control"
-                value={formData.description}
+                value={formData.contact}
                 onChange={(e) => handleChange(e)}
               />
-              <label htmlFor="">Description</label>
+              <label htmlFor="">Contact</label>
             </div>
 
             {/* image */}
@@ -234,7 +236,7 @@ export default function AddStore() {
               className="form-control btn-primary mt-2 mb-3"
               onClick={handlePublish}
             >
-              Add Store
+              Register Store
             </button>
           </>
         )}
