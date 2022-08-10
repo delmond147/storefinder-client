@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom'
 function Checkout() {
     const navigate = useNavigate()
     const handleCheckout = () => {
-        navigate("/bank-pay")
+        navigate("https://buy.stripe.com/test_3cs9Ce6KCdRYa3edQR")
     }
     return (
         <Container>

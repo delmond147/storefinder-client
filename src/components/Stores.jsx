@@ -5,7 +5,7 @@ import { auth, db } from '../firebase';
 import DeleteStore from './DeleteStore';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import LikeStore from './LikeStore';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Stores() {
   const [stores, setStores] = useState([]);
@@ -178,12 +178,9 @@ export default function Stores() {
                             {createdAt.toDate().toDateString()}
                           </small>
                           {user ? (
-                            <button
-                              onClick={() => navigate('/checkout')}
-                              className="btn btn-dark px-3"
-                            >
+                            <Link to="https://buy.stripe.com/test_3cs9Ce6KCdRYa3edQR">
                               Rent
-                            </button>
+                            </Link>
                           ) : (
                             <button
                               onClick={() => navigate('/signin')}
