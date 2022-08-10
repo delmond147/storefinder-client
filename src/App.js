@@ -16,7 +16,6 @@ import { UserAuthContextProvider } from './context/UserAuthContext'
 import Footer from './components/footer/Footer'
 // import ProtectedRoutes from './ProtectedRoutes'
 
-
 function App() {
   return (
     <div className="container-xxl bg-light p-0">
@@ -30,6 +29,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/bank-pay" element={<App />} />
           <Route path="/team" element={<Team />} />
           <Route path="/signin" element={<Login />} />
           <Route path="/signup" element={<Register />} />
